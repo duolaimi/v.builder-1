@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="V.builder : sm前端自动化开发框架（just local combo）">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>V.builder</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/lmtdit/v.builder">View on GitHub</a>
+
+          <h1 id="project_title">V.builder</h1>
+          <h2 id="project_tagline">sm前端自动化开发框架（just local combo）</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/lmtdit/v.builder/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/lmtdit/v.builder/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="前端自动化开发框架和部署说明" class="anchor" href="#%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E5%92%8C%E9%83%A8%E7%BD%B2%E8%AF%B4%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>前端自动化开发框架和部署说明</h1>
+
+<hr>
+
+<p>by Pang.J.G</p>
+
+<p>本项目基于nodejs环境下的Gulp.JS</p>
+
+<h2>
+<a id="安装-nodejs-环境" class="anchor" href="#%E5%AE%89%E8%A3%85-nodejs-%E7%8E%AF%E5%A2%83" aria-hidden="true"><span class="octicon octicon-link"></span></a>安装 nodeJS 环境</h2>
+
+<ul>
+<li>
+<p>前往 <a href="http://nodejs.org/">http://nodejs.org/</a> 安装nodeJS</p>
+
+<ul>
+<li>注意系统是32位还是64位的，选择对应的版本</li>
+<li>如果是windows系统，需自行设置好环境变量，将nodejs的路径加入到系统的 <code>path</code> 环境变量中</li>
+</ul>
+</li>
+<li><p>安装 <code>gulp</code> 全局支持，在终端执行 <code>npm install -g gulp</code></p></li>
+</ul>
+
+<h2>
+<a id="项目部署和初始化" class="anchor" href="#%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>项目部署和初始化</h2>
+
+<p>本代码库包含了一个静态demo，如在实际开发的项目中部署，例如，你打算将前端静态资源放在 <code>~/statics/</code> 文件夹，那么：</p>
+
+<h4>
+<a id="step-1复制源码" class="anchor" href="#step-1%E5%A4%8D%E5%88%B6%E6%BA%90%E7%A0%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>STEP 1：复制源码</h4>
+
+<p>将 <code>build</code> 目录下的源码复制到 <code>statics</code> 文件夹下；</p>
+
+<p>如果，单独对源码进行代码管理，可以使用以下命令：</p>
+
+<pre><code>git clone https://github.com/lmtdit/bdCore.git build
+</code></pre>
+
+<h4>
+<a id="step-2安装依赖" class="anchor" href="#step-2%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>STEP 2：安装依赖</h4>
+
+<p>进入build目录，执行 <code>npm install</code>，安装依赖的nodejs模块</p>
+
+<h4>
+<a id="step-3初始化" class="anchor" href="#step-3%E5%88%9D%E5%A7%8B%E5%8C%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>STEP 3：初始化</h4>
+
+<p>模块安装完成后，使用如下命令进行初始化</p>
+
+<pre><code>gulp init
+</code></pre>
+
+<h4>
+<a id="step-4目录结构" class="anchor" href="#step-4%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>STEP 4：目录结构</h4>
+
+<p>项目初始化后，会根据 <code>build/config.json</code> 中的配置生成如下的目录结构：</p>
+
+<div class="highlight highlight-js"><pre>├── build
+    ├── bin <span class="pl-c">// shell执行命令目录</span>
+    ├── data <span class="pl-c">// 第三方JS模块目录</span>
+    ├── lib <span class="pl-c">// 核心的构建方法 </span>
+    ├── config.js <span class="pl-c">// 开发配置文件</span>
+    ├── config.json <span class="pl-c">// 项目构建的配置入口文件</span>
+    ├── gulpfile.js <span class="pl-c">// gulp启动配置入口文件</span>
+    └── <span class="pl-k">package</span>.json <span class="pl-c">// nodeJS依赖安装的包管理文件</span>
+├──_src <span class="pl-c">//静态源码目录，原则上，这个目录中的所有资源是不需要发布到预发布及生产环境的</span>
+    ├──_css <span class="pl-c">//本地debug的缓存目录</span>
+    ├──_js <span class="pl-c">//本地debug的缓存目录</span>
+    ├──_img <span class="pl-c">//本地debug的缓存目录</span>
+    ├──html <span class="pl-c">//后端html模板的构建目录，支持后端模板引擎语言，如smarty</span>
+    ├──js <span class="pl-c">//js源码，AMD模块规范</span>
+    ├──less <span class="pl-c">//CSS的less源码目录</span>
+    ├──sprite <span class="pl-c">//雪碧图的源码目录</span>
+    └──tpl <span class="pl-c">//前端MVVM引擎的模板源码目录，开发维护的是html，但生产时会被封装成ADM规范的js模块</span>
+├── asset <span class="pl-c">//前端资源的生产目录，根据config.json的配置来定</span>
+    ├──css  <span class="pl-c">//带hash的css文件，保存压缩版和源码版两个版本</span>
+    ├──js  <span class="pl-c">//带hash的css文件，保存压缩版和源码版两个版本</span>
+    ├──img <span class="pl-c">//图片资源目录</span>
+    ├   ├──bg <span class="pl-c">//css中用到的单个背景图的hash格式输出目录，自动构建</span>
+    ├   └──sp <span class="pl-c">//css中用到的雪碧图的hash格式输出目录，自动构建</span>
+    └──map  <span class="pl-c">//保存css、js以及雪碧图的hash的map</span></pre></div>
+
+<blockquote>
+<p>如果 <code>build/config.json</code> 文件不存在，则初始化过程会自动生成，默认配置的源文件是 <code>build/data/default.json</code>。</p>
+</blockquote>
+
+<h4>
+<a id="step-5前后端解耦" class="anchor" href="#step-5%E5%89%8D%E5%90%8E%E7%AB%AF%E8%A7%A3%E8%80%A6" aria-hidden="true"><span class="octicon octicon-link"></span></a>STEP 5：前后端解耦</h4>
+
+<p><strong>为何要解耦？如何解耦？</strong></p>
+
+<p>构建框架则会根据 <code>build/config.json</code> 中的设置，将map文件生成到 <code>{{distPathName}}/map</code> 目录中，即默认的map源码路径为 <code>assets/map</code> ，文件分别是</p>
+
+<pre><code>cssbgmap.json // css中背景图片资源map，或则js中用到的图片资源map
+cssmap.json // css生产文件的map
+jsLibs.json // js生产文件的map
+jsmap.json // js源文件的map
+</code></pre>
+
+<p>资源的map有了，通过map就可以定位静态资源，但在项目的实施过程中，如果不是纯基于API的开发项目，那么还需要先确立服务端的模板层(view层)该由谁来维护？</p>
+
+<p><strong>前端维护服务端模板</strong></p>
+
+<p>如果由前端来维护，那么，可将静态的demo构建机制作为后端模板的构建机制，直接在开发过程中解决资源的定位问题，并对html模板进行压缩优化。</p>
+
+<p>这样是最优化的做法，如果前端团队的能力模型符合这样的要求，建议采用这一方式。</p>
+
+<p><strong>后端维护服务端模板</strong></p>
+
+<p>如果由后端来维护，前端只提供demo，那么在在发布测试或上线过程中，前端开发人需要通过发布命令来生成静态资源的map，并上传到服务端的代码码库中，然后在服务端的模板层解析过程中解决前端资源的定位问题。</p>
+
+<p>这种方式是前后端可能会耦合在一起，因为模板层要依赖于前端的map。由于考虑到灰度发布的情况，静态资源的路径（文件名）上会包含有内容的hash，那么在快速开发迭代中，静态资源变化会使得map也频繁改变。</p>
+
+<p>同时，后端模板也需要随时修改，如果两边不同步就会发生静态资源定位错误，导致业务出错，这是很危险的，只要map的更新，服务端要上新代码，就要先征求前端的同意，确定当前的map是不是和当前模板是相对应的。</p>
+
+<p>事实上，只要服务端存在view层并且都需要引用前端资源（css/js/img），不管该模板层由谁来需要维护，都存在上述的问题，前后端就无法彻底解耦。</p>
+
+<p>基于上述的分析，解耦建议：</p>
+
+<ul>
+<li>1，服务端模板的模板层，要独立于后端的业务逻辑，单独进行版本控制；</li>
+<li>2，前端生成的map也应当存放在模板层的代码库中，进行统一的版本控制；</li>
+<li>3、这个服务端的模板层代码库建议由前端来负责维护。</li>
+</ul>
+
+<p><strong>优点：</strong></p>
+
+<ul>
+<li>这样做的好处非常明显，不管前端代码优化、SEO优化、问题版本的回滚，都很容易；</li>
+<li>前后端分离开发的好处自然不用多说，前后端彻底解耦，可大规模推广到各种前后端协作的项目中</li>
+</ul>
+
+<p><strong>缺点：</strong></p>
+
+<ul>
+<li>前端开发人员的要求提高了，需要具备一定服务端的语言能力；</li>
+<li>即便是模板层也是要依赖于后端环境的，虽然是相对简单的开发环境，前端开发人员还需要部署后端环境；</li>
+<li>性能有一定牺牲，毕竟不是直接插入静态资源，而是通过解析map间接的方式插入，需要消耗一定的服务器运算时间。</li>
+</ul>
+
+<h3>
+<a id="基于php的静态资源解析的实现demo" class="anchor" href="#%E5%9F%BA%E4%BA%8Ephp%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%A7%A3%E6%9E%90%E7%9A%84%E5%AE%9E%E7%8E%B0demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>基于php的静态资源解析的实现（demo）</h3>
+
+<p>服务端模板解析前端资源，这个需要结合环境来实现，而且需要预留debug的接口或参数，因此，这个机制的实现需要结合项目的实际情况来做处理。
+以下是一个基于php的静态资源解析实现，仅供参考：</p>
+
+<h4>
+<a id="js的map解析实现" class="anchor" href="#js%E7%9A%84map%E8%A7%A3%E6%9E%90%E5%AE%9E%E7%8E%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>js的map解析实现</h4>
+
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c">/**</span></span>
+<span class="pl-s1"><span class="pl-c"> * init_js - 构造前端页面js资源请求的函数</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@author</span>  pjg</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@param</span> [string] $js_names 传入需要加载的js名称,不能为空,多个js用半角逗号“,”隔开</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@param</span> [string] $CURRENT_Environment 当前的环境，默认是'pc'，即静态域名为 PCSTATICS_SITE_URL</span></span>
+<span class="pl-s1"><span class="pl-c"> *         ,如果值为'bc',则为BCSTATICS_SITE_URL</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@return</span>  string</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@example</span> </span></span>
+<span class="pl-s1"><span class="pl-c"> * &lt;?php echo init_js('sb.corelibs.js,sb.mods_index.js,sb.mods_list.js,piwik.js');?&gt;</span></span>
+<span class="pl-s1"><span class="pl-c"> * 当在local开发环境下，默认启动require+jquery来调试源码，同时提供在URL加上 ‘dev=2’ 的参数时，则可以开启生产代码的调试</span></span>
+<span class="pl-s1"><span class="pl-c"> * 当在test、rc以及生产环境下，在URL上加上 ‘dev=1’ 的参数时，则可以开启源码调试模式，以便错误的排查</span></span>
+<span class="pl-s1"><span class="pl-c"> * </span></span>
+<span class="pl-s1"><span class="pl-c"> */</span></span>
+<span class="pl-s1"><span class="pl-k">function</span> <span class="pl-en">init_js</span>(<span class="pl-smi">$js_names</span>,<span class="pl-smi">$CURRENT_Environment</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>pc<span class="pl-pds">'</span></span>){</span>
+<span class="pl-s1">    <span class="pl-smi">$jslink</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">    <span class="pl-c">// 调试开关 dev=1</span></span>
+<span class="pl-s1">    <span class="pl-smi">$_is_debug</span> <span class="pl-k">=</span> <span class="pl-smi">$_GET</span>[<span class="pl-s"><span class="pl-pds">'</span>dev<span class="pl-pds">'</span></span>]<span class="pl-k">==</span><span class="pl-c1">1</span> ? <span class="pl-c1">true</span> : <span class="pl-c1">false</span>;</span>
+<span class="pl-s1">    <span class="pl-smi">$_is_local</span> <span class="pl-k">=</span> <span class="pl-c1">CURRENT_DOMAIN</span> <span class="pl-k">!</span><span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>test.<span class="pl-pds">'</span></span> <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">CURRENT_DOMAIN</span> <span class="pl-k">!</span><span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>rc.<span class="pl-pds">'</span></span> <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">CURRENT_DOMAIN</span> <span class="pl-k">!</span><span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">    <span class="pl-c">// 判断当前静态环境</span></span>
+<span class="pl-s1">    <span class="pl-smi">$static_path</span> <span class="pl-k">=</span> (<span class="pl-smi">$CURRENT_Environment</span><span class="pl-k">==</span><span class="pl-s"><span class="pl-pds">'</span>bc<span class="pl-pds">'</span></span> ? <span class="pl-c1">BCSTATICS_SITE_URL</span> : <span class="pl-c1">PCSTATICS_SITE_URL</span>);</span>
+<span class="pl-s1">    <span class="pl-smi">$static_path</span> <span class="pl-k">.=</span> ((<span class="pl-smi">$_is_debug</span><span class="pl-k">||</span><span class="pl-smi">$_is_local</span>)<span class="pl-k">&amp;&amp;</span><span class="pl-smi">$_GET</span>[<span class="pl-s"><span class="pl-pds">'</span>dev<span class="pl-pds">'</span></span>]<span class="pl-k">!</span><span class="pl-k">=</span><span class="pl-c1">2</span>) ? <span class="pl-s"><span class="pl-pds">'</span>/_src<span class="pl-pds">'</span></span> : <span class="pl-s"><span class="pl-pds">'</span>/assets<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">    <span class="pl-smi">$js_path</span> <span class="pl-k">=</span> <span class="pl-smi">$static_path</span> <span class="pl-k">.</span> (((<span class="pl-smi">$_is_debug</span><span class="pl-k">||</span><span class="pl-smi">$_is_local</span>)<span class="pl-k">&amp;&amp;</span><span class="pl-smi">$_GET</span>[<span class="pl-s"><span class="pl-pds">'</span>dev<span class="pl-pds">'</span></span>]<span class="pl-k">!</span><span class="pl-k">=</span><span class="pl-c1">2</span>) ? <span class="pl-sr"><span class="pl-pds">'/</span>_js<span class="pl-pds">/'</span></span> : <span class="pl-sr"><span class="pl-pds">'/</span>js<span class="pl-pds">/'</span></span>);</span>
+<span class="pl-s1">    <span class="pl-c">// 处理请求</span></span>
+<span class="pl-s1">    <span class="pl-smi">$_tempArr</span> <span class="pl-k">=</span> <span class="pl-c1">explode</span>(<span class="pl-s"><span class="pl-pds">"</span>,<span class="pl-pds">"</span></span>,<span class="pl-smi">$js_names</span>);</span>
+<span class="pl-s1">    <span class="pl-smi">$map_path</span> <span class="pl-k">=</span> <span class="pl-c1">BASE_TEMPlATES_ROOT_PATH</span> <span class="pl-k">.</span><span class="pl-sr"><span class="pl-pds">'/</span>map<span class="pl-pds">/'</span></span><span class="pl-k">.</span><span class="pl-smi">$CURRENT_Environment</span>; <span class="pl-c">// 构造map的资源路径</span></span>
+<span class="pl-s1">    <span class="pl-smi">$jsmap</span> <span class="pl-k">=</span> <span class="pl-k">require_once</span>(<span class="pl-smi">$map_path</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>/jslibs.php<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">    <span class="pl-k">foreach</span> (<span class="pl-smi">$_tempArr</span> <span class="pl-k">as</span> <span class="pl-smi">$key</span> <span class="pl-k">=&gt;</span> <span class="pl-smi">$value</span>) {</span>
+<span class="pl-s1">        <span class="pl-c">// 如果是本地，并且URL参数dev=2，那么可以直接调试生产码</span></span>
+<span class="pl-s1">        <span class="pl-k">if</span>((<span class="pl-smi">$_is_debug</span><span class="pl-k">||</span><span class="pl-smi">$_is_local</span>)<span class="pl-k">&amp;&amp;</span><span class="pl-smi">$_GET</span>[<span class="pl-s"><span class="pl-pds">'</span>dev<span class="pl-pds">'</span></span>]<span class="pl-k">!</span><span class="pl-k">=</span><span class="pl-c1">2</span>){</span>
+<span class="pl-s1">            <span class="pl-c">// 调试模式</span></span>
+<span class="pl-s1">            <span class="pl-k">if</span>(<span class="pl-smi">$value</span><span class="pl-k">==</span><span class="pl-s"><span class="pl-pds">'</span>sb.corelibs.js<span class="pl-pds">'</span></span>){</span>
+<span class="pl-s1">                <span class="pl-smi">$jslink</span> <span class="pl-k">.=</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;script&gt;var STATIC_PATH="<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-smi">$static_path</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>",VARS=window.VARS={},_VM_=window._VM_={};&lt;/script&gt;<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">                <span class="pl-smi">$jslink</span> <span class="pl-k">.=</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;script src="<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-smi">$js_path</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>vendor/require/require.js"&gt;&lt;/script&gt;<span class="pl-pds">'</span></span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span>;</span>
+<span class="pl-s1">                <span class="pl-smi">$jslink</span> <span class="pl-k">.=</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;script src="<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-smi">$js_path</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>vendor/jquery/jquery.js"&gt;&lt;/script&gt;<span class="pl-pds">'</span></span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span>;</span>
+<span class="pl-s1">                <span class="pl-smi">$jslink</span> <span class="pl-k">.=</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;script src="<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-smi">$js_path</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>require_cfg.js?t=<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-c1">time</span>()<span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>"&gt;&lt;/script&gt;<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">            }<span class="pl-k">else</span>{</span>
+<span class="pl-s1">                <span class="pl-k">if</span>(<span class="pl-c1">strpos</span>(<span class="pl-smi">$value</span>,<span class="pl-s"><span class="pl-pds">'</span>sb.<span class="pl-pds">'</span></span>)<span class="pl-k">===</span><span class="pl-c1">0</span>){</span>
+<span class="pl-s1">                    <span class="pl-smi">$jsmod_name</span> <span class="pl-k">=</span> <span class="pl-c1">str_replace</span>(<span class="pl-s"><span class="pl-pds">'</span>_<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>/<span class="pl-pds">'</span></span>,<span class="pl-c1">str_replace</span>(<span class="pl-s"><span class="pl-pds">'</span>.js<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>,<span class="pl-c1">str_replace</span>(<span class="pl-s"><span class="pl-pds">'</span>sb.<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>,<span class="pl-smi">$value</span>)));</span>
+<span class="pl-s1">                    <span class="pl-smi">$jslink</span> <span class="pl-k">.=</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;script&gt;require(["<span class="pl-pds">'</span></span> <span class="pl-k">.</span> <span class="pl-smi">$jsmod_name</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>"])&lt;/script&gt;<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">                }<span class="pl-k">else</span>{</span>
+<span class="pl-s1">                    <span class="pl-smi">$jslink</span> <span class="pl-k">.=</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;script src="<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-smi">$js_path</span><span class="pl-k">.</span><span class="pl-smi">$value</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>?t=<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-c1">time</span>()<span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>"&gt;&lt;/script&gt;<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">                }</span>
+<span class="pl-s1">            }</span>
+<span class="pl-s1">        }<span class="pl-k">else</span>{</span>
+<span class="pl-s1">            <span class="pl-c">// 生产模式</span></span>
+<span class="pl-s1">            <span class="pl-smi">$js_name</span> <span class="pl-k">=</span> <span class="pl-smi">$value</span>;</span>
+<span class="pl-s1">            <span class="pl-smi">$_id</span> <span class="pl-k">=</span> <span class="pl-c1">str_replace</span>(<span class="pl-s"><span class="pl-pds">'</span>.js<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>,<span class="pl-c1">str_replace</span>(<span class="pl-s"><span class="pl-pds">'</span>sb.<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>,<span class="pl-smi">$value</span>));</span>
+<span class="pl-s1">            <span class="pl-k">if</span>(<span class="pl-c1">array_key_exists</span>(<span class="pl-smi">$value</span>,<span class="pl-smi">$jsmap</span>)){</span>
+<span class="pl-s1">                <span class="pl-smi">$js_name</span> <span class="pl-k">=</span> <span class="pl-smi">$jsmap</span>[<span class="pl-smi">$value</span>][<span class="pl-s"><span class="pl-pds">'</span>distname<span class="pl-pds">'</span></span>];</span>
+<span class="pl-s1">            }<span class="pl-k">else</span>{</span>
+<span class="pl-s1">                <span class="pl-smi">$js_name</span> <span class="pl-k">=</span> <span class="pl-smi">$value</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>?t=<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-c1">date</span>(<span class="pl-s"><span class="pl-pds">"</span>Ymdhi<span class="pl-pds">"</span></span>);</span>
+<span class="pl-s1">            }</span>
+<span class="pl-s1">            <span class="pl-k">if</span>(<span class="pl-smi">$value</span><span class="pl-k">==</span><span class="pl-s"><span class="pl-pds">'</span>sb.corelibs.js<span class="pl-pds">'</span></span>){</span>
+<span class="pl-s1">                <span class="pl-smi">$jslink</span> <span class="pl-k">.=</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;script&gt;var STATIC_PATH="<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-smi">$static_path</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>",VARS=window.VARS={},_VM_=window._VM_={};&lt;/script&gt;<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">            }</span>
+<span class="pl-s1">            <span class="pl-smi">$jslink</span> <span class="pl-k">.=</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;script src="<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-smi">$js_path</span><span class="pl-k">.</span><span class="pl-smi">$js_name</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>" id="<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-smi">$_id</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>"&gt;&lt;/script&gt;<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">        }</span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1">    <span class="pl-k">return</span> <span class="pl-smi">$jslink</span>;</span>
+<span class="pl-s1">}</span>
+<span class="pl-s1"></span></pre></div>
+
+<h4>
+<a id="css的map解析实现" class="anchor" href="#css%E7%9A%84map%E8%A7%A3%E6%9E%90%E5%AE%9E%E7%8E%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>css的map解析实现</h4>
+
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c">/**</span></span>
+<span class="pl-s1"><span class="pl-c"> * init_css - 构造前端页面css资源请求的函数</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@author</span> pjg</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@param</span> [string] $css_names  传入需要加载的css名称,不能为空,多个css用半角逗号“,”隔开</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@param</span> [string] $CURRENT_Environment 当前的环境，默认是'pc'，即静态域名为 PCSTATICS_SITE_URL</span></span>
+<span class="pl-s1"><span class="pl-c"> *         ,如果值为'bc',则为BCSTATICS_SITE_URL</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@return</span> [string]</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@example</span> </span></span>
+<span class="pl-s1"><span class="pl-c"> * &lt;?php echo init_css('common.css,index.css,test.css','pc');?&gt;</span></span>
+<span class="pl-s1"><span class="pl-c"> */</span></span>
+<span class="pl-s1"><span class="pl-k">function</span> <span class="pl-en">init_css</span>(<span class="pl-smi">$css_names</span>,<span class="pl-smi">$CURRENT_Environment</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>pc<span class="pl-pds">'</span></span>){</span>
+<span class="pl-s1">    <span class="pl-smi">$csslink</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">    <span class="pl-c">// 调试开关 dev=1</span></span>
+<span class="pl-s1">    <span class="pl-smi">$_is_debug</span> <span class="pl-k">=</span> <span class="pl-smi">$_GET</span>[<span class="pl-s"><span class="pl-pds">'</span>dev<span class="pl-pds">'</span></span>]<span class="pl-k">==</span><span class="pl-c1">1</span> ? <span class="pl-c1">true</span> : <span class="pl-c1">false</span>;</span>
+<span class="pl-s1">    <span class="pl-smi">$_is_local</span> <span class="pl-k">=</span> <span class="pl-c1">CURRENT_DOMAIN</span> <span class="pl-k">!</span><span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>test.<span class="pl-pds">'</span></span> <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">CURRENT_DOMAIN</span> <span class="pl-k">!</span><span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>rc.<span class="pl-pds">'</span></span> <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">CURRENT_DOMAIN</span> <span class="pl-k">!</span><span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">    <span class="pl-c">// 判断当前静态环境</span></span>
+<span class="pl-s1">    <span class="pl-smi">$static_path</span> <span class="pl-k">=</span> (<span class="pl-smi">$CURRENT_Environment</span><span class="pl-k">==</span><span class="pl-s"><span class="pl-pds">'</span>bc<span class="pl-pds">'</span></span> ? <span class="pl-c1">BCSTATICS_SITE_URL</span> : <span class="pl-c1">PCSTATICS_SITE_URL</span>);</span>
+<span class="pl-s1">    <span class="pl-smi">$static_path</span> <span class="pl-k">.=</span> ((<span class="pl-smi">$_is_debug</span><span class="pl-k">||</span><span class="pl-smi">$_is_local</span>)<span class="pl-k">&amp;&amp;</span><span class="pl-smi">$_GET</span>[<span class="pl-s"><span class="pl-pds">'</span>dev<span class="pl-pds">'</span></span>]<span class="pl-k">!</span><span class="pl-k">=</span><span class="pl-c1">2</span>) ? <span class="pl-s"><span class="pl-pds">'</span>/_src/_css/<span class="pl-pds">'</span></span> : <span class="pl-s"><span class="pl-pds">'</span>/assets/css/<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">    <span class="pl-c">// 处理请求</span></span>
+<span class="pl-s1">    <span class="pl-smi">$map_path</span> <span class="pl-k">=</span> <span class="pl-c1">BASE_TEMPlATES_ROOT_PATH</span> <span class="pl-k">.</span><span class="pl-sr"><span class="pl-pds">'/</span>map<span class="pl-pds">/'</span></span><span class="pl-k">.</span><span class="pl-smi">$CURRENT_Environment</span>; <span class="pl-c">// 构造map的资源路径</span></span>
+<span class="pl-s1">    <span class="pl-smi">$cssmap</span> <span class="pl-k">=</span> <span class="pl-k">require_once</span>(<span class="pl-smi">$map_path</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>/cssmap.php<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">    <span class="pl-smi">$_tempArr</span> <span class="pl-k">=</span> <span class="pl-c1">explode</span>(<span class="pl-s"><span class="pl-pds">"</span>,<span class="pl-pds">"</span></span>,<span class="pl-smi">$css_names</span>);</span>
+<span class="pl-s1">    <span class="pl-k">foreach</span> (<span class="pl-smi">$_tempArr</span> <span class="pl-k">as</span> <span class="pl-smi">$key</span> <span class="pl-k">=&gt;</span> <span class="pl-smi">$value</span>) {</span>
+<span class="pl-s1">        <span class="pl-smi">$css_name</span> <span class="pl-k">=</span> <span class="pl-smi">$value</span>;</span>
+<span class="pl-s1">        <span class="pl-k">if</span>((<span class="pl-smi">$_is_debug</span><span class="pl-k">||</span><span class="pl-smi">$_is_local</span>)<span class="pl-k">&amp;&amp;</span><span class="pl-smi">$_GET</span>[<span class="pl-s"><span class="pl-pds">'</span>dev<span class="pl-pds">'</span></span>]<span class="pl-k">!</span><span class="pl-k">=</span><span class="pl-c1">2</span>){</span>
+<span class="pl-s1">            <span class="pl-c">// 调试模式</span></span>
+<span class="pl-s1">            <span class="pl-smi">$css_name</span> <span class="pl-k">=</span> <span class="pl-smi">$value</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>?t=<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-c1">time</span>();</span>
+<span class="pl-s1">        }<span class="pl-k">else</span>{</span>
+<span class="pl-s1">            <span class="pl-c">// 生产模式</span></span>
+<span class="pl-s1">            <span class="pl-k">if</span>(<span class="pl-c1">array_key_exists</span>(<span class="pl-smi">$value</span>,<span class="pl-smi">$cssmap</span>)){</span>
+<span class="pl-s1">                <span class="pl-smi">$css_name</span> <span class="pl-k">=</span> <span class="pl-smi">$cssmap</span>[<span class="pl-smi">$value</span>][<span class="pl-s"><span class="pl-pds">'</span>distname<span class="pl-pds">'</span></span>];</span>
+<span class="pl-s1">            }<span class="pl-k">else</span>{</span>
+<span class="pl-s1">                <span class="pl-smi">$css_name</span> <span class="pl-k">=</span> <span class="pl-smi">$value</span><span class="pl-k">.</span><span class="pl-s"><span class="pl-pds">'</span>?t=<span class="pl-pds">'</span></span><span class="pl-k">.</span><span class="pl-c1">date</span>(<span class="pl-s"><span class="pl-pds">"</span>Ymdhi<span class="pl-pds">"</span></span>);</span>
+<span class="pl-s1">            }</span>
+<span class="pl-s1">        }</span>
+<span class="pl-s1">        <span class="pl-smi">$csslink</span> <span class="pl-k">.=</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;link href="<span class="pl-pds">'</span></span> <span class="pl-k">.</span> <span class="pl-smi">$static_path</span> <span class="pl-k">.</span> <span class="pl-smi">$css_name</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>" rel="stylesheet" type="text/css"&gt;<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1">    <span class="pl-k">return</span> <span class="pl-smi">$csslink</span>;</span>
+<span class="pl-s1">}</span></pre></div>
+
+<h2>
+<a id="开发" class="anchor" href="#%E5%BC%80%E5%8F%91" aria-hidden="true"><span class="octicon octicon-link"></span></a>开发</h2>
+
+<p>ok，上述的事项已经部署完成，那么我们可以进入前端的项目开了。使用 <code>gulp</code> 命令默认启动开发模式：</p>
+
+<pre><code>gulp
+</code></pre>
+
+<h4>
+<a id="更多参数使用说明" class="anchor" href="#%E6%9B%B4%E5%A4%9A%E5%8F%82%E6%95%B0%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>更多参数使用说明</h4>
+
+<p>以gulp命令启动程序，它可接收两个参数，分别是</p>
+
+<p>参数1： --env 或者 --e</p>
+
+<blockquote>
+<p>此参数是环境参数，默认值为'local'，其他值分别为test、rc、www，分别针对测试、预发布和生产环境，在测试和发布环节中使用。</p>
+</blockquote>
+
+<p>参数2： --debug 或者 --d</p>
+
+<blockquote>
+<p>此参数为调试开关，带上此参数，html模板则开启debug模式</p>
+</blockquote>
+
+<p><strong>命令使用示例:</strong>
+1、local开发环境的watch命令：</p>
+
+<div class="highlight highlight-shell"><pre>gulp
+
+<span class="pl-c"># or</span>
+gulp --e <span class="pl-k">local</span>
+
+<span class="pl-c"># or</span>
+gulp --env <span class="pl-k">local</span>
+<span class="pl-c">#以上三个命令是等效的</span></pre></div>
+
+<p>2、local开发环境的debug命令：</p>
+
+<div class="highlight highlight-shell"><pre>gulp --d
+
+<span class="pl-c"># or</span>
+gulp --debug
+
+<span class="pl-c"># or</span>
+gulp --env <span class="pl-k">local</span> --d</pre></div>
+
+<p>3、发布代码</p>
+
+<pre><code># 测试环境
+gulp --e test
+gulp --env test
+
+# 预发布环境
+gulp --e rc
+gulp --env rc
+
+# 生产环境
+gulp --e rc
+gulp --env rc
+</code></pre>
+
+<p>4、其他命令使用说明</p>
+
+<p><strong>查看自动化框架支持的项目构建命令</strong></p>
+
+<pre><code>gulp -T
+gulp helper
+</code></pre>
+
+<p>本前端开发框架还支持如下命令：</p>
+
+<div class="highlight highlight-js"><pre> Tasks
+   ├── init <span class="pl-c">//用于前端项目的初始化</span>
+   ├── del.<span class="pl-c1">data</span> <span class="pl-c">//删除构建过程的缓存数据</span>
+   ├── del.dist <span class="pl-c">//清理自动构建的静态文件[生产文件]</span>
+   ├── jslibs <span class="pl-c">//生产js的第三方库列表，主要用于构建require.config的paths对象</span>
+   ├── cfg <span class="pl-c">//生成require.config</span>
+   ├── tpl <span class="pl-c">//将html模板构建成为JS模块，即html转化为AMD规范的js文件</span>
+   ├── js2dev <span class="pl-c">//匿名的AMD模块构建为具名的AMD模块，并发布到源码的缓存目录[_src/_js/]，供本地调用</span>
+   ├── js2dist <span class="pl-c">//按AMD规范的js模块转化为原生的js，并按依赖顺序COMBO成1个文件，然后发布到生产目录，生成2份代码</span>
+   ├── sp <span class="pl-c">//合并生产雪碧图和对应了LESS</span>
+   ├── bgmap <span class="pl-c">//所有css将用到背景图[包括自动生产的雪碧]生产一份hash map（json文件）</span>
+   ├── less <span class="pl-c">//将less输出为css，并发布到源码的缓存目录[_src/_css/]，供本地调用</span>
+   ├── css <span class="pl-c">//将缓存目录中的css压缩并自动将引用背景图加上MD5戳，然后发布到生产目录</span>
+   ├── all2dist <span class="pl-c">//css和js源码的缓存目录中的文件发布到生产目录</span>
+   ├── html <span class="pl-c">//将模块化的静态html文件构建成一个静态可使用的html demo（img scr的引用图片替换为带MD5戳）</span>
+   ├── watch <span class="pl-c">//gulp的watch任务，可快速启动开发者模式</span>
+   ├── <span class="pl-k">default</span> <span class="pl-c">//默认任务，默认进入开发模式</span>
+   └── release <span class="pl-c">//发布任务</span></pre></div>
+
+<h2>
+<a id="规范和建议" class="anchor" href="#%E8%A7%84%E8%8C%83%E5%92%8C%E5%BB%BA%E8%AE%AE" aria-hidden="true"><span class="octicon octicon-link"></span></a>规范和建议</h2>
+
+<h3>
+<a id="编程规范" class="anchor" href="#%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83" aria-hidden="true"><span class="octicon octicon-link"></span></a>编程规范</h3>
+
+<ul>
+<li><p><a href="./build/javascript.md">JavaScript编程规范</a></p></li>
+<li><p><a href="./build/javascript.md">CSS编程规范</a></p></li>
+</ul>
+
+<h3>
+<a id="架构流程和目录规范" class="anchor" href="#%E6%9E%B6%E6%9E%84%E6%B5%81%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E8%A7%84%E8%8C%83" aria-hidden="true"><span class="octicon octicon-link"></span></a>架构流程和目录规范</h3>
+
+<p><img src="./readme.jpg" alt="项目的开发架构流程和规范"></p>
+
+<p><img src="./html_css.jpg" alt="HTML和CSS的组织规范和建议"></p>
+
+<p><img src="./javascript.jpg" alt="JavaScript的组织规范和建议"></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">V.builder maintained by <a href="https://github.com/lmtdit">lmtdit</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
