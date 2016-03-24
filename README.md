@@ -121,7 +121,31 @@ gulp --e www
 
 vbuilder中包含的html模板引擎，实际上是在ejs模板引擎语法上进行的二次封装，此框架设定的ejs模板标志为 `@`
 
-例如：当参数名字为`css`，值为 `pintuer.css,admin.css`，`<@- css @>`可以实力为css的路径引用
+例如：当参数名字为`css`，值为 `pintuer.css,admin.css`，那么，在`local`开发环境下 `<@- css @>` 将被实例为如下的html
+
+```HTML
+<link href='//localhost:8800/debug/css/common.css?v=2.1.6&t=14588093' rel='stylesheet' type='text/css' />
+<link href='//localhost:8800/debug/css/index.css?v=2.1.6&t=14588093' rel='stylesheet' type='text/css' />
+<script>
+    var STATIC_PATH = '//localhost:8800/debug/',
+        _LIB_ = window['_LIB_'] = {},
+        _VM_ = window['_VM_'] = {};
+    _LIB_.getStaticUri = {
+        img: function(n) {
+            return STATIC_PATH + 'img/' + n;
+        },
+        css: function(n) {
+            return STATIC_PATH + 'css/' + n;
+        },
+        js: function(n) {
+            return STATIC_PATH + 'js/' + n
+        }
+    };
+</script>
+```
+
+由于css被实例时，会附带全局的javascript的静态域名变量以及两个全局命名空间，这些变量会在javascript模块化构建中使用，因此在一个页面中只需要进行一次css文件实例即可。
+
 
 (未完待续)
 
