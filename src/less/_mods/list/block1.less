@@ -1,0 +1,269 @@
+// 当前模块需要用到的雪碧图
+@import '../../_sprite/list';
+/* 专场、分类 */
+.m-brand-wrap{
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff;
+  .m-brand-info{
+    height: 50px;
+    padding-bottom: 20px;
+    line-height: 50px;
+    border-bottom: 1px solid #eee;
+  }
+  .brand-name{
+    float: left;
+    width: 800px;
+    h1{
+      float: left;
+      margin-right: 15px;
+      font-weight: normal;
+      font-size: 16px;
+      color: #333333;
+    }
+  }
+  .brand-logo{
+    float: left;
+    margin-right: 15px;
+    img{
+      display: block;
+      width: 115px;
+      height: 34px;
+      margin-top: 8px;
+    }
+  }
+  .m-additional{
+    float: left;
+    width: 165px;
+    height: 18px;
+    margin-top: 16px;
+    line-height: 18px;
+    font-size: 12px;
+    color: #ff6060;
+    background: #ffebeb;
+    span{
+      margin-right: 8px;
+      padding:0 8px;
+      background: #ff6060;
+      color: #ffffff;
+    }
+  }
+  .brand-time{
+    float: right;
+    padding-top: 5px;
+    .sale-time{
+      float: left;
+      margin-right: 15px;
+      font-size: 14px;
+      color: #333;
+      i.icon-time{
+        .d-ib7();
+        .icon-list-icon-time();
+        vertical-align: -3px;
+      }
+    }
+    .collection{
+      float: left;
+      height: 18px;
+      margin-top: 15px;
+      padding-left: 15px;
+      line-height: 18px;
+      border-left: 1px solid #ddd;
+      font-size: 12px;
+      color: #ff6060;
+      i.icon-collection{
+        .d-ib7();
+        .icon-list-icon-collection();
+        vertical-align: -3px;
+      }
+    }
+  }
+  .m-brand-full{
+    padding: 30px 0 20px 0;
+    .brand-tit{
+      font-size: 12px;
+      color: #999999;
+    }
+    .brand-full{
+      margin: -20px 0 0 50px;
+      a{
+        .d-ib7();
+        line-height: 22px;
+        padding: 0 12px;
+        color: #666;
+      }
+    }
+  }
+}
+
+/* 列表排序 */
+.m-list-sort{
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px 20px;
+}
+.sort-wrap{
+  float: left;
+   a{
+     &.sort-item{
+       display: block;
+       float: left;
+       height: 32px;
+       margin-right: 10px;
+       padding: 0 10px;
+       background: #eee;
+       line-height: 32px;
+       .border-radius(5px);
+       span{
+         font-size: 12px;
+         color: #666;
+       }
+       i{
+         margin: 9px 0 0 4px;
+         display: inline-block;
+       }
+     }
+     .icon-down{
+       .icon-list-down();
+     }
+     .icon-up-down{
+       .icon-list-up-down();
+     }
+     &.active,&:hover{
+       background: #26b080;
+       text-decoration: none;
+       span{
+         color:#fff;
+       }
+       .icon-down{
+         .icon-list-down-active();
+       }
+       .icon-up-down{
+         .icon-list-up-down-active();
+       }
+     }
+     &.sort-goods{
+       i.icon-radio{
+         margin: 9px 5px 0 0;
+         .icon-list-radio();
+         display: inline-block;
+         float: left;
+       }
+       span{
+         float: left;
+       }
+       &.active,&:hover{
+         background: #eee;
+         span{
+           color: #666666;
+         }
+       }
+       &.active{
+         .icon-radio{
+           .icon-list-radio-active();
+         }
+       }
+     }
+   }
+}
+.page-wrap{
+  float: right;
+  li{
+    display: inline;
+    line-height: 32px;
+    font-size: 12px;
+    color: #666666;
+  }
+  .i-line{
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    .d-ib7();
+    margin: 0 20px 0 24px;
+    vertical-align: -2px;
+  }
+  .c-page-item{
+    color: #26b080;
+  }
+  .page-controller{
+    padding-left: 10px;
+  }
+  a.page-prev,a.page-next{
+    .d-ib7();
+    height: 24px;
+    line-height: 24px;
+    padding: 0 8px;
+    background: #bbb;
+    vertical-align: middle;
+    font-style: normal;
+    font-size: 16px;
+    font-family: '\5B8B\4F53',arial,sans-serif;
+    color: #fff;
+    .border-radius(2px);
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  a.disabled{
+    background: #eeeeee;
+    color: #ddd;
+    cursor: default;
+  }
+}
+
+/* 商品列表 */
+.m-list-wrap{
+  margin-top: 20px;
+  position: relative;
+  ul {
+    margin-right: -20px;
+  }
+  li {
+    width: 285px;
+    height: 380px;
+    float: left;
+    margin: 0 20px 20px 0;
+    background: #fff;
+    position: relative;
+  }
+  .product-wrap{
+    width: 283px;
+    height: 380px;
+    border: 1px solid #ededed;
+    .thumbnail{
+      display: block;
+      img{
+        display: block;
+        width: 283px;
+        height: 283px;
+      }
+    }
+    .product-info{
+      padding: 8px 15px 0 15px;
+      .title{
+        line-height: 22px;
+      }
+      .price{
+        padding-top: 8px;
+        font-size: 16px;
+        font-family: "airal";
+        color:#e73069;
+      }
+      .discount{
+        font-size: 12px;
+        padding: 0 2px;
+      }
+      .original{
+        font-size: 12px;
+        color: #999999;
+        text-decoration: line-through;
+      }
+    }
+    &:hover{
+      position: absolute;
+      top:-1px;
+      left:-1px;
+      border: 2px solid #93d7bf;
+    }
+  }
+}

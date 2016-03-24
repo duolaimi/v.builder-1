@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "description": "a front-end automation construction framework based on gulpJS.",
+  "scripts": {
+    "test": "gulp init"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7",
+    "vbuilder": "^2.1.4"
+  },
+  "name": "v.builder",
+  "version": "2.1.6",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmtdit/v.builder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmtdit/v.builder/issues"
+  },
+  "homepage": "https://github.com/lmtdit/v.builder#readme"
+}

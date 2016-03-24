@@ -1,0 +1,30 @@
+{
+    "paths": {
+        "src": "src",
+        "debug": "debug",
+        "dist": "dist",
+        "map": "dist/map"
+    },
+    "viewPath": "./views/",
+    "coreJs": {
+        "mods": [
+            "jquery",
+            "vmcore"
+        ],
+        "name": "corelibs"
+    },
+    "fontExt": [
+        "eot",
+        "svg",
+        "ttf",
+        "woff"
+    ],
+    "prefix": "combo",
+    "spaceName": "_LIB_",
+    "hashLen": 10,
+    "cdnDomain": "",
+    "version": "2.1.6",
+    "host": "localhost",
+    "port": "8800",
+    "openBrower": false
+}

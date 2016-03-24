@@ -1,0 +1,102 @@
+// 当前模块需要用到的雪碧图
+@import '../../_sprite/list';
+
+/* 标题栏目 */
+.m-hd-attention{
+  height: 18px;
+  margin: 20px 0 14px 0;
+  line-height: 18px;
+  border-left: 2px solid #26b080;
+  strong{
+    padding-left: 12px;
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: normal;
+    color: #333333;
+  }
+}
+
+/* 列表组 最后疯抢*/
+.m-list-group{
+  ul{
+    margin-right: -20px;
+  }
+  li{
+    width: 285px;
+    height: 380px;
+    float:left;
+    margin: 0 20px 20px 0;
+    background: #fff;
+  }
+  .list-item{
+    .thumbnail{
+      display: block;
+      width: 285px;
+      height: 285px;
+      position: relative;
+      img{
+        display: block;
+      }
+      .txt{
+        position: absolute;
+        left:0;
+        bottom:0;
+        width: 100%;
+        height: 26px;
+        background: #7f7f7f;
+        span{
+          line-height: 26px;
+          padding-left: 15px;
+          color: #fff;
+        }
+      }
+    }
+    .m-small-tit{
+      height: 32px;
+      background: #c9f3e4;
+      text-align: center;
+      line-height: 32px;
+      p{
+        font-size: 14px;
+        color: #333;
+      }
+      i.icon-time{
+        .d-ib7();
+        .icon-list-icon-time();
+        vertical-align: -3px;
+      }
+    }
+    /*明日预告 全场满300减50背影变化 */
+    .m-small-notice{
+      background: #ffdede;
+      p{
+        font-size: 14px;
+        color: #ff6060;
+      }
+    }
+    .m-sale-brand{
+      padding: 15px 10px 10px 10px;
+      .m-sale-logo{
+        float: left;
+        width: 115px;
+        height: 34px;
+        img{
+          display: block;
+        }
+      }
+      p{
+        float: right;
+        line-height: 34px;
+        font-size: 12px;
+        color:#999;
+        span{
+          &.u-price{
+            padding: 0 5px;
+            font-size: 20px;
+            color: #e73069;
+          }
+        }
+      }
+    }
+  }
+}

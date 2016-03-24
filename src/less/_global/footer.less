@@ -1,0 +1,219 @@
+//引入公共雪碧图
+@import '../_sprite/common';
+/* footer */
+#footer{
+  margin-top: 106px;
+  background: #fff;
+}
+.m-foot-topbg{
+  height: 59px;
+  background: url("../img/bg/bg-foot-top.png") no-repeat top center;
+}
+.m-foot-server{
+  width: 100%;
+  margin-top: 60px;
+  border-bottom: 1px solid #e4e4e4;
+}
+.foot-server{
+  padding-bottom: 56px;
+  li{
+    height: 42px;
+    float: left;
+    a{
+      display: block;
+      float: left;
+      i{
+        display: block;
+      }
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  i{
+    &.icon-server1{
+      .icon-common-icon-server1();
+    }
+    &.icon-server2{
+      .icon-common-icon-server2();
+    }
+    &.icon-server3{
+      .icon-common-icon-server3();
+    }
+    &.icon-server4{
+      .icon-common-icon-server4();
+    }
+  }
+  .foot-server-bd{
+    display: block;
+    margin: -42px 0 0 48px;
+    h4{
+      font-size: 18px;
+      font-weight: normal;
+      color: #333;
+    }
+    p{
+      font-size: 12px;
+      color:#999;
+    }
+  }
+  .server-item2{
+    .foot-server-bd{
+      display: block;
+      margin: -42px 0 0 57px;
+    }
+  }
+  .serverline{
+    display: block;
+    float: left;
+    width:1px;
+    height: 42px;
+    margin: 0 91px 0 91px;
+    background: #eee;
+  }
+}
+
+.m-foot-nav{
+  margin-top: 38px;
+  margin-bottom: 80px;
+  .content-link{
+    width: 980px;
+    float: left;
+    dl{
+      float: left;
+      width: 196px;
+    }
+    dt {
+      line-height: 42px;
+      font-size: 16px;
+      font-weight: normal;
+      color:#333;
+    }
+    dd {
+      line-height: 22px;
+      a{
+        .font-fs();
+      }
+    }
+  }
+  .kefu-con{
+    li{
+      padding-top:15px;
+    }
+    i{
+      display: block;
+      &.icon-tel{
+        .icon-common-icon-tel();
+      }
+      &.icon-chat{
+        .icon-common-icon-chat();
+      }
+    }
+    .kefu-item{
+      margin: -35px 0 0 35px;
+      strong {
+        font-size: 22px;
+        color:#26b080;
+      }
+      p{
+        color: #333;
+        .font-fs();
+      }
+    }
+  }
+  .content-qr{
+    float: right;
+    padding-top: 18px;
+    .qrcode-info{
+      p{
+        font-size: 12px;
+        color: #333;
+      }
+    }
+  }
+}
+
+.m-foot-bottom{
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  background: #535353;
+  .m-copyright{
+    float: left;
+    color:#7c7c7c;
+    i{
+      display: block;
+      float: left;
+      margin-top: 22px;
+      margin-right: 10px;
+      .icon-common-icon-logo();
+    }
+    p{
+      float: left;
+    }
+  }
+  .m-links{
+    float: right;
+    a{
+      padding-left: 15px;
+      color: #c3c3c3;
+      .font-fs();
+    }
+  }
+}
+
+/* side-panel */
+.m-sidebar-panel {
+  position: fixed;
+  _position: absolute;
+  z-index: 2000;
+  left: 50%;
+  margin-left: 610px;
+  bottom: 120px;
+  width: 38px;
+  background: #333;
+  opacity: 1;
+  color:#fff;
+  .border-radius(20px);
+  .sidebar-paner-item{
+    padding: 15px 0;
+    border-bottom:1px solid #4f4f4f;
+    i {
+      display: block;
+      margin:0 auto 2px auto;
+      &.icon-cart{
+        .icon-common-icon-cart();
+      }
+      &.icon-kf{
+        .icon-common-icon-kf();
+      }
+      &.icon-top{
+        .icon-common-icon-top();
+      }
+    }
+  }
+  .sidebar-cart{
+    margin-top: 5px;
+  }
+  .sidebar-top{
+    border-bottom:none;
+  }
+  .sidebarcom-text{
+    margin: 0 auto;
+    width: 14px;
+    line-height: 18px;
+    word-wrap: break-word;
+    word-break: normal;
+    font-size: 12px;
+    color: #fff;
+  }
+  .cart-num{
+    display: block;
+    margin: 5px auto 0 auto;
+    .icon-common-icon-circle();
+    overflow: hidden;
+    line-height: 23px;
+    text-align: center;
+    color: #fff;
+  }
+}

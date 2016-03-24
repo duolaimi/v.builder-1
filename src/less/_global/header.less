@@ -1,0 +1,199 @@
+//引入公共雪碧图
+@import '../_sprite/common';
+.header {
+    background-color: #fff;
+    /*topbar*/
+
+    .topbar {
+        height: 36px;
+        font-family: "SimSun", "宋体";
+        background-color: #fff;
+    }
+    .topbar-right {
+        li {
+            float: left;
+            margin-left: 25px;
+            height: 36px;
+            line-height: 36px;
+        }
+    }
+    .app {
+        position: relative;
+        padding-left: 15px;
+        i.icon {
+            .icon-common-app();
+            position: absolute;
+            top: 11px;
+            left: 0;
+        }
+    }
+    .personal {
+        position: relative;
+        z-index: 10000;
+        /*下拉*/
+
+        .pull-down {
+            span, em {
+                display: block;
+                height: 36px;
+                line-height: 36px;
+            }
+            .eg {
+                display: none;
+            }
+            &:hover {
+                display: block;
+                min-height: 36px;
+                height: ~"expression(document.body.clientHeight > 36? '36px': 'auto' )";
+                .eg {
+                    display: block;
+                    transition: height 2s;
+                    -moz-transition: height 2s;
+                    -webkit-transition: height 2s;
+                }
+            }
+        }
+    }
+    .contact {
+        position: relative;
+        padding-left: 18px;
+        i.icon {
+            display: block;
+            .icon-common-contact();
+            position: absolute;
+            top: 11px;
+            left: 0;
+        }
+    }
+    /*doc-head*/
+
+    .doc-head {
+        height: 138px;
+        width: 100%;
+        background: #0cddcc url('../img/doc-head-bg.png') no-repeat left top;
+        .logo-nav {
+            position: relative;
+            height: 141px;
+            background: url('../img/logo-nav-bg.png') no-repeat 275px top;
+        }
+        .logo {
+            position: absolute;
+            left: -91px;
+            a {
+                display: block;
+                width: 359px;
+                height: 138px;
+                background: url('../img/logo.jpg') no-repeat center top;
+                text-indent: -9999em;
+            }
+        }
+        /*nav*/
+
+        .nav {
+            height: 70px;
+            width: 850px;
+            margin: 30px 0 0 265px;
+            background: url('../img/nav-bg.png') no-repeat right center;
+            li {
+                float: left;
+                position: relative;
+                margin-right: 75px;
+                .icon-common-nav();
+                cursor: pointer;
+                &:hover, &.active {
+                    .icon-common-nav-active();
+                    .nav-main, .nav-menu {
+                        color: #fff;
+                    }
+                    .nav-menu a {
+                        font-size: 12px;
+                        color: #fff;
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+                .nav-main,
+                .nav-menu {
+                    display: inline-block;
+                    padding-left: 38px;
+                    color: #26b080;
+                }
+                .nav-menu a {
+                    display: inline-block;
+                    margin-right: 5px;
+                    color: #26b080;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+                .nav-main {
+                    padding-top: 10px;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                .nav-menu {
+                    font-family: "SimSun", "宋体";
+                }
+            }
+        }
+        /*cart*/
+
+        .cart {
+            margin: 35px 0 0 -98px;
+            a.mycart {
+                display: block;
+                position: relative;
+                .icon-common-cart();
+            }
+            .cartnum {
+                position: absolute;
+                right: -5px;
+                top: -8px;
+                display: block;
+                .icon-common-cartnum();
+                text-align: center;
+                line-height: 24px;
+                color: #fff;
+                font-size: 16px;
+                font-family: arial;
+            }
+        }
+    }
+    /*submenu-box*/
+
+    .submenu-box {
+        background-color: #fff;
+        height: 50px;
+        line-height: 50px;
+    }
+    .tel {
+        margin-top: 18px;
+        text-indent: -9999em;
+        .icon-common-tel();
+    }
+    .submenu {
+        margin-left: 115px;
+        padding-top: 8px;
+        li {
+            float: left;
+            margin: 0 16px;
+            a {
+                display: block;
+                font-size: 14px;
+                color: #666;
+                height: 35px;
+                line-height: 35px;
+                padding: 0 18px;
+                &:hover, &.active {
+                    background-color: #26b080;
+                    -moz-border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                    border-radius: 3px;
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

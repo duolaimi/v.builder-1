@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html>
+<head>
+@@include("./_global/head.html",{
+    "title":"demo页",
+    "css_head":"common,index"
+})
+<body>
+
+    <!-- header -->
+    <!-- 全局的header -->
+<div class="new_header_ab">
+    <div class="header header_wide_lv2 w1090">
+        <div class="header_top">
+            <div class="header_top_box">
+                <div id="hd_user" vm-controller="header_user"></div>
+                <div class="default-city">
+                    <span class="add-city-icons">送至<span class="add-default-city">广东</span>
+                    <s class="icon_arrow_down"></s>
+                    <i class="user-local-icon" style="display: none;"></i>
+                    </span>
+                    <div class="header-city-list" style="height: auto;">
+                        <dl class="user-local-city">
+                        </dl>
+                        <div class="city-loading hidden"><i></i>正在切换至<span>上海</span>...</div>
+                    </div>
+                </div>
+                <ul id="headerTopRight" class="header_top_right">
+                    <li><a rel="nofollow" href="http://www.jumei.com/i/order/list">订单查询</a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="http://www.jumei.com/i/product/fav_brands">
+                            <s class="icon_favorite"></s>收藏的品牌</a>
+                    </li>
+                    <li class="item_ijumei">
+                        <a rel="nofollow" href="http://www.jumei.com/i/order/list">我的聚美<s class="icon_arrow_down"></s></a>
+                        <div class="sub_nav" style="display: none; height: auto; overflow: visible;">
+                            <ul>
+                                <li><a rel="nofollow" href="http://www.jumei.com/i/order/list">我的订单</a>
+                                </li>
+                                <li><a rel="nofollow" href="http://www.jumei.com/i/membership/show_promocards">我的现金券</a>
+                                </li>
+                                <li><a rel="nofollow" href="http://www.jumei.com/i/membership/show_red_envelope">我的红包</a>
+                                </li>
+                                <li><a rel="nofollow" href="http://www.jumei.com/i/account/balance">我的余额</a>
+                                </li>
+                                <li><a rel="nofollow" href="http://www.jumei.com/i/account/balance_record">我的提现退款</a>
+                                </li>
+                                <li><a rel="nofollow" href="http://www.jumei.com/i/product/fav_products">我的收藏</a>
+                                </li>
+                                <li><a rel="nofollow" href="http://www.jumei.com/i/wishdeal/onsale">我的心愿单</a>
+                                </li>
+                                <li><a rel="nofollow" href="http://www.jumei.com/i/membership">会员中心</a>
+                                </li>
+                                <li><a rel="nofollow" href="http://www.jumei.com/i/membership/gift_card">兑换礼品卡</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item_mobile"><a rel="nofollow" href="http://www.jumei.com/act/download_app.html?from=Home_top_nav_fresh_mobile_tab_new"><span class="line"></span><s class="icon_mobile"></s>手机聚美</a>
+                    </li>
+                    <li class="item_koubei">
+                        <a href="http://koubei.jumei.com?from=Home_top_nav_fresh_koubei_tab_new">
+                            <s class="icon_koubei"></s>口碑中心</a>
+                    </li>
+                    <li>
+                        <span class="line"></span>
+                        <div id="look_all_box" class="look_all_box">
+                            <a class="look_all"><span>查看分类</span><b class="grid png"></b><b class="close png"></b></a>
+                            <div class="class_list_wrap clearfix">
+                                <div class="pop_item_wrap">
+                                    <div class="pop_item clearfix current">
+                                        <textarea> &lt;dl&gt; &lt;dt&gt;面部护肤&lt;/dt&gt; &lt;dd&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E6%B4%81%E9%9D%A2&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;洁面&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%88%BD%E8%82%A4%E6%B0%B4&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;爽肤水&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E4%B9%B3%E6%B6%B2&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;乳液&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%9D%A2%E9%9C%9C&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;面霜&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%9D%A2%E8%86%9C&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;面膜&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E6%8A%A4%E8%82%A4%E5%A5%97%E8%A3%85&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;护肤套装&lt;/a&gt; &lt;/dd&gt; &lt;/dl&gt; &lt;dl&gt; &lt;dt&gt;眼部护理&lt;/dt&gt; &lt;dd&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%9C%BC%E9%9C%9C&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;眼霜&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%9C%BC%E9%83%A8%E7%B2%BE%E5%8D%8E&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;眼部精华&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%9C%BC%E8%86%9C&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;眼膜&lt;/a&gt; &lt;/dd&gt; &lt;/dl&gt; &lt;dl&gt; &lt;dt&gt;唇部护理&lt;/dt&gt; &lt;dd&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E6%B6%A6%E5%94%87%E8%86%8F&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;润唇膏&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E5%94%87%E9%83%A8%E7%B2%BE%E5%8D%8E&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;唇部精华&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E5%94%87%E8%86%9C&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;唇膜&lt;/a&gt; &lt;/dd&gt; &lt;/dl&gt; &lt;dl&gt; &lt;dt&gt;欧美品牌&lt;/dt&gt; &lt;dd&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%9B%85%E8%AF%97%E5%85%B0%E9%BB%9B&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;雅诗兰黛&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E5%80%A9%E7%A2%A7&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;倩碧&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E5%85%B0%E8%94%BB&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;兰蔻&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E6%AC%A7%E8%8E%B1%E9%9B%85&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;欧莱雅&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E8%96%87%E5%A7%BF&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;薇姿&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%8E%89%E5%85%B0%E6%B2%B9&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;玉兰油&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%8E%AB%E7%90%B3%E5%87%AF&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;玫琳凯&lt;/a&gt; &lt;/dd&gt; &lt;/dl&gt; &lt;dl&gt; &lt;dt&gt;日韩品牌&lt;/dt&gt; &lt;dd&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=SK-II&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;SK-II&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E8%B5%84%E7%94%9F%E5%A0%82&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;资生堂&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E5%85%B0%E8%8A%9D&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;兰芝&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%AB%98%E4%B8%9D&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;高丝&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E8%8F%B2%E8%AF%97%E5%B0%8F%E9%93%BA&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;菲诗小铺&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E6%9B%BC%E7%A7%80%E9%9B%B7%E6%95%A6&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;曼秀雷敦&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%9B%AA%E8%82%8C%E7%B2%BE&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;雪肌精&lt;/a&gt; &lt;/dd&gt; &lt;/dl&gt; &lt;dl&gt; &lt;dt&gt;国货品牌&lt;/dt&gt; &lt;dd&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E4%BD%B0%E8%8D%89%E9%9B%86&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;佰草集&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%9F%A9%E6%9D%9F&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;韩束&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%9B%B8%E5%AE%9C%E6%9C%AC%E8%8D%89&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;相宜本草&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%99%BE%E9%9B%80%E7%BE%9A&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;百雀羚&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%BE%8E%E5%8D%B3&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;美即&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E4%B8%B9%E5%A7%BF&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;丹姿&lt;/a&gt; &lt;a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E4%B8%B8%E7%BE%8E&amp;from=all_null_index_nav_right_null&amp;cat=&amp;lo=3478&amp;mat=37918" target="_blank"&gt;丸美&lt;/a&gt; &lt;/dd&gt; &lt;/dl&gt;
+                                        </textarea>
+                                    </div>
+                                    <div class="pop_item clearfix">
+                                        <textarea>
+                                        </textarea>
+                                    </div>
+                                </div>
+                                <div class="pop_list_wrap">
+                                    <ul class="pop_list">
+                                        <li class="t1 current">
+                                            <a target="_blank" href="http://search.jumei.com/?filter=0-11-1&amp;search=&amp;cat=1&amp;from=all_null_index_nav_right_null&amp;lo=3478&amp;mat=37918">面部护理</a><b></b>
+                                        </li>
+                                        <li class="t2">
+                                            <a target="_blank" class="t2_link" href="http://search.jumei.com/?filter=0-11-1&amp;search=&amp;cat=3,34&amp;from=all_null_index_nav_right_null&amp;lo=3478&amp;mat=37918">彩妆香氛</a><b></b>
+                                        </li>
+                                        <li class="t3">
+                                            <a target="_blank" class="t3_link" href="http://search.jumei.com/?filter=0-11-1&amp;search=&amp;cat=21&amp;from=all_null_index_nav_right_null&amp;lo=3478&amp;mat=37918">身体护理</a><b></b>
+                                        </li>
+                                        <li class="t4">
+                                            <a target="_blank" class="t4_link" href="http://pop.jumei.com/dress_sport?&amp;from=all_null_index_nav_right_null&amp;lo=3478&amp;mat=37918">服饰/内衣</a><b></b>
+                                        </li>
+                                        <li class="t5">
+                                            <a target="_blank" class="t5_link" href="http://pop.jumei.com/shoe_bag?&amp;from=all_null_index_nav_right_null&amp;lo=3478&amp;mat=37918">鞋包/配饰</a><b></b>
+                                        </li>
+                                        <li class="t6">
+                                            <a target="_blank" class="t6_link" href="http://pop.jumei.com/home_baby?&amp;from=all_null_index_nav_right_null&amp;lo=3478&amp;mat=37918">居家/母婴</a><b></b>
+                                        </li>
+                                    </ul>
+                                    <div class="header_searchbox">
+                                        <form onsubmit="return mall_search_validate(this)" class="" pos="top" method="get" action="http://search.jumei.com">
+                                            <input type="hidden" value="0-11-1" name="filter">
+                                            <input type="text" lang="zh" x-webkit-grammar="builtin:search" x-webkit-speech="" autocomplete="off" default_val="祛斑" id="mall_search_input" class="header_search_input" name="search">
+                                            <input type="hidden" name="from">
+                                            <input type="hidden" name="cat">
+                                            <button class="header_search_btn" type="submit">搜美妆</button>
+                                        </form>
+                                        <div id="top_search_pop_div" class="search_result_pop_a"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item_more">
+                        <a href="javascript:void(0)">更多<s class="icon_arrow icon_arrow_down"></s></a>
+                        <div class="sub_nav">
+                            <s class="icon_arrow_up"></s>
+                            <s class="icon_arrow_inner"></s>
+                            <ul>
+                                <li><a rel="nofollow" target="_blank" href="http://www.jumei.com/i/account/referrals/">邀请好友</a>
+                                </li>
+                                <li><a id="bookmark_us" rel="nofollow" href="javascript:void(0)"><span class="bottomline">加入收藏</span></a>
+                                </li>
+                                <li><a target="_blank" rel="nofollow" class="er_box" href="http://weibo.com/tuanmei">新浪微博<span style="display: none;"><img src="http://p0.jmstatic.com/templates/jumei/images/sina_er.png"></span></a>
+                                </li>
+                                <li><a rel="nofollow" class="er_box" href="javascript:void(0)">聚美微信<span style="display: none;"><img src="http://p0.jmstatic.com/jumei_weixin_header1.png"></span></a>
+                                </li>
+                                <li><a target="_blank" class="er_box" href="http://tieba.baidu.com/f?kw=%BE%DB%C3%C0%D3%C5%C6%B7&amp;fr=ala0">百度贴吧</a>
+                                </li>
+                                <li><a target="_blank" rel="nofollow" class="er_box" href="http://t.qq.com/jumei_tuangou">腾讯微博<span style="display: none;"><img src="http://p0.jmstatic.com/templates/jumei/images/qq_er.png"></span></a>
+                                </li>
+                                <li><a target="_blank" rel="nofollow" class="er_box" href="http://page.renren.com/601021070">人人公众主页<span style="display: none;"><img src="http://p0.jmstatic.com/templates/jumei/images/renren_er.png"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!--  支付尾款提醒-->
+                    <!--  支付尾款提醒 end-->
+                </ul>
+                <!--气泡开始-->
+                <div class="top-poptips" vm-include="tpl_tips" data-include-rendered="render"></div>
+                <!--气泡结束-->
+            </div>
+        </div>
+        <div class="header_center  clearfix">
+            <h1 class="logo">
+                <a href="#"  id="home"  title="聚美优品">化妆品品牌排行榜大全网站聚美优品</a>
+            </h1>
+            <!--Mall search-->
+            <div class="header_searchbox header_mall_searchbox">
+                <form action="#" method="get" pos="top" class="" onsubmit="return mall_search_validate(this)">
+                    <input name="filter" type="hidden" value="0-11-1" />
+                    <input name="search" type="text" class="header_search_input" id="mall_search_input1" default_val="" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh" />
+                    <input name="from" type="hidden" />
+                    <input name="cat" type="hidden" />
+                    <button type="submit" class="header_search_btn">搜美妆</button>
+                </form>
+                <div class="search_result_pop_a" id="top_search_pop_div1"></div>
+                <ul class="hot_word">
+                    <li><a href="http://search.jumei.com/?filter=0-11-1&search=%E4%BF%9D%E6%B9%BF" target="_blank">保湿</a>
+                        <s class="line"></s>
+                    </li>
+                    <li><a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E9%9D%A2%E8%86%9C">面膜</a>
+                        <s class="line"></s>
+                    </li>
+                    <li><a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E6%B4%97%E9%9D%A2%E5%A5%B6">洗面奶</a>
+                        <s class="line"></s>
+                    </li>
+                    <li><a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E8%A1%A5%E6%B0%B4">补水</a>
+                        <s class="line"></s>
+                    </li>
+                    <li><a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E9%A6%99%E6%B0%B4">香水</a>
+                        <s class="line"></s>
+                    </li>
+                    <li><a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E7%9C%BC%E9%9C%9C">眼霜</a>
+                        <s class="line"></s>
+                    </li>
+                    <li><a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E5%8F%A3%E7%BA%A2">口红</a>
+                        <s class="line"></s>
+                    </li>
+                    <li><a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E6%8A%A4%E8%82%A4%E5%A5%97%E8%A3%85">护肤套装</a>
+                        <s class="line"></s>
+                    </li>
+                    <li><a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=BB%E9%9C%9C">BB霜</a>
+                    </li>
+                </ul>
+            </div>
+            <!--end Mall-->
+            <div class="header_icon_wrap" vm-controller="header_cart"></div>
+        </div>
+        <div class="header_bottom">
+            <div class="channel_nav_box">
+                <div class="channel_nav_list_wrap clearfix">
+                    <ul class="channel_nav_list">
+                        <li class="current"><a href="http://www.jumei.com?from=Home_show_nav_fresh_new_2" class="home">首页</a>
+                        </li>
+                        <li class="haitao_li"><a href="http://www.jumeiglobal.com/?from=Home_show_nav_fresh_new_2" target="_blank">极速免税店</a><span></span>
+                        </li>
+                        <li>
+                            <a href="http://mall.jumei.com?from=Home_show_nav_fresh_new_2">美妆商城<b></b></a>
+                            <textarea class="pop_act_area">
+                                <div class="mz_imglist">
+                                    <a target="_blank" href="http://beauty.jumei.com?from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573"><img src="images/30573_254_135_003-web.jpg" />
+                                    </a>
+                                    <a target="_blank" href="http://mall.jumei.com/xihu?from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573"><img src="images/30573_254_135_005-web.jpg" />
+                                    </a>
+                                </div>
+                                <div class="mz_inner clearfix">
+                                    <dl style="border-left:none">
+                                        <dt class="item_int png"><a> 国际大牌</a>
+                                        </dt>
+                                        <dd><a href="http://lancome.jumei.com/?from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">兰蔻</a>
+                                        </dd>
+                                        <dd><a href="http://clarins.jumei.com/?from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">娇韵诗</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%9B%85%E8%AF%97%E5%85%B0%E9%BB%9B&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">雅诗兰黛</a>
+                                        </dd>
+                                        <dd><a href="http://loreal.jumei.com/?from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">欧莱雅</a>
+                                        </dd>
+                                        <dd><a href="http://laneige.jumei.com/?from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">兰芝</a>
+                                        </dd>
+                                        <dd><a href="http://clinique.jumei.com/?from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">倩碧</a>
+                                        </dd>
+                                        <dd><a href="http://skii.jumei.com/?from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">SK-II</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%9B%85%E6%BC%BE&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">雅漾</a>
+                                        </dd>
+                                        <dd><a href="http://jurlique.jumei.com/?from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">茱莉蔻</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt class="item_hufu png"><a href="http://search.jumei.com/?filter=0-11-1&amp;search=护肤&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank"> 护肤</a>
+                                        </dt>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E6%B4%81%E9%9D%A2&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">洁面</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%88%BD%E8%82%A4%E6%B0%B4&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">爽肤水</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%B2%BE%E5%8D%8E&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">精华</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E4%B9%B3%E6%B6%B2&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">乳液</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%9D%A2%E9%9C%9C&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">面霜</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%9C%BC%E9%9C%9C&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">眼霜</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%9D%A2%E8%86%9C&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">面膜</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E6%8A%A4%E8%82%A4%E5%A5%97%E8%A3%85&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">护肤套装</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt class="item_caizhuang png"><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E5%BD%A9%E5%A6%86&from=all_null_index_top_nav_cosmetics&amp;cat=&amp;bid=1&lo=3481&mat=30573" target="_blank">彩妆</a>
+                                        </dt>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E5%8D%B8%E5%A6%86&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">卸妆</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=BB%E9%9C%9C&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">BB霜</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%B2%89%E5%BA%95%E6%B6%B2&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">粉底液</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%B2%89%E9%A5%BC&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">粉饼</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%9C%BC%E5%BD%B1&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">眼影</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%9C%BC%E7%BA%BF%E7%AC%94&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">眼线笔</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%9D%AB%E6%AF%9B%E8%86%8F&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">睫毛膏</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%9C%89%E7%AC%94&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">眉笔</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E5%8F%A3%E7%BA%A2&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">口红</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E8%85%AE%E7%BA%A2&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">腮红</a>
+                                        </dd>
+                                    </dl>
+                                    <dl style="border-bottom:none;border-left:none">
+                                        <dt class="item_xiangfen png"><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%A6%99%E6%B0%B4&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">香氛</a>
+                                        </dt>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E5%A5%B3%E5%A3%AB%E9%A6%99%E6%B0%B4&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">女士香水</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%94%B7%E5%A3%AB%E9%A6%99%E6%B0%B4&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">男士香水</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E4%B8%AD%E6%80%A7%E9%A6%99%E6%B0%B4&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">中性香水</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%A6%99%E6%B0%B4+5ml&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">Q版香水</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%A6%99%E6%B0%B4%E5%A5%97%E8%A3%85&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">香水套装</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%B2%BE%E6%B2%B9&amp;cat=197&amp;bid=2_c&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">精油</a>
+                                        </dd>
+                                    </dl>
+                                    <dl style="border-bottom:none">
+                                        <dt class="item_nanshi png"><a href="http://search.jumei.com/?filter=0-11-1&amp;search=男士护理&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">男士专区</a>
+                                        </dt>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E6%B4%81%E9%9D%A2&amp;cat=418&amp;bid=2_c&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">洁面</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%94%B7%E5%A3%AB%E7%88%BD%E8%82%A4%E6%B0%B4&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">爽肤水</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%9D%A2%E9%9C%9C&amp;cat=418&amp;bid=2_c&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">面霜</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%B2%BE%E5%8D%8E&amp;cat=418&amp;bid=2_c&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">精华</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%94%B7%E5%A3%AB%E5%A5%97%E8%A3%85&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">护肤套装</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%94%B7%E5%A3%AB%E6%B4%97%E5%8F%91&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">洗发</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%94%B7%E5%A3%AB%E6%B2%90%E6%B5%B4&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">沐浴</a>
+                                        </dd>
+                                    </dl>
+                                    <dl style="border-bottom:none">
+                                        <dt class="item_hot png"><a>热门搜索</a>
+                                        </dt>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%9D%A2%E8%86%9C%E8%B4%B4&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">面膜贴</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E6%B4%97%E9%9D%A2%E5%A5%B6&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">洗面奶</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E5%94%87%E8%86%8F&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">唇膏</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E5%8E%BB%E9%BB%91%E5%A4%B4&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">去黑头</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%A5%9B%E6%96%91&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">祛斑</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E9%9A%94%E7%A6%BB&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">隔离</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E7%A5%9B%E7%97%98&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">祛痘</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E5%8E%BB%E8%A7%92%E8%B4%A8&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">去角质</a>
+                                        </dd>
+                                        <dd><a href="http://search.jumei.com/?filter=0-11-1&amp;search=%E6%8C%87%E7%94%B2%E6%B2%B9&from=all_null_index_top_nav_cosmetics&lo=3481&mat=30573" target="_blank">指甲油</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </textarea>
+                        </li>
+                        <li><a href="http://pop.jumei.com/dress_sport" target="_blank">服装运动</a>
+                        </li>
+                        <li><a href="http://pop.jumei.com/shoe_bag" target="_blank">鞋包配饰</a>
+                        </li>
+                        <li class="bz " id="zpbz">
+                            <a href="http://hd.jumei.com/act/6-478-2232-guarantee.html?from=Home_show_nav_popcosm_new">正品保证<b></b></a>
+                            <ul class="bz_list">
+                                <li><a href="http://hd.jumei.com/act/6-478-2232-guarantee.html#jumei_ipo" target="_blank">在美上市</a>
+                                </li>
+                                <li><a href="http://hd.jumei.com/act/6-478-2232-guarantee.html#brand_con" target="_blank">品牌防伪码</a>
+                                </li>
+                                <li><a href="http://hd.jumei.com/act/6-478-2232-guarantee.html#unconditionally_backtrack" target="_blank">无理由退货</a>
+                                </li>
+                                <li><a href="http://hd.jumei.com/act/9-478-1673-sepuceshi.html" target="_blank">色谱检测</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="header_pop_subAtc box-shadow" id="header_pop_subAct">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /全局的header -->
+    <!-- main -->
+    <div id="container">
+
+    <div class="slider_box" style="display:none">
+        <div class="slider_index">
+            <div class="bd">
+                <ul>
+                    <li>
+                        <a target="_blank" data-interaction="index|adsilder|1|1" href="" title="A2奶粉促销送进口辅食">
+                            <img class="preload" data-src="https://placeholdit.imgix.net/~text?txtsize=20&bg=f0c908&txtclr=ffffff&txt=%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88&w=1920&h=270" src="/dist/img/dot.png" alt="A2奶粉促销送进口辅食" />
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" data-interaction="index|adsilder|1|3" href="" title="牛栏奶粉促销活动专场">
+                            <img class="preload" data-src="https://placeholdit.imgix.net/~text?txtsize=20&bg=ff6600&txtclr=ffffff&txt=%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88&w=1920&h=270" src="/dist/img/dot.png" alt="牛栏奶粉促销活动专场" />
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" data-interaction="index|adsilder|1|2" href="" title="过年囤货季">
+                            <img class="preload" data-src="https://placeholdit.imgix.net/~text?txtsize=20&bg=ff9900&txtclr=ffffff&txt=%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88&w=1920&h=270" src="/dist/img/dot.png" alt="过年囤货季" />
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" data-interaction="index|adsilder|1|3" href="" title="牛栏奶粉促销活动专场22">
+                            <img class="preload" data-src="https://placeholdit.imgix.net/~text?txtsize=20&bg=ff3300&txtclr=ffffff&txt=%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88&w=1920&h=270" src="/dist/img/dot.png" alt="牛栏奶粉促销活动专场22" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hd">
+                <ul></ul>
+            </div>
+            <div class="pnBtn">
+                <a class="arrow prev" href="javascript:void(0)"></a>
+                <a class="arrow next" href="javascript:void(0)"></a>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+        <!-- block1 -->
+        <!--每日必看 start-->
+<div class="mustsee" id="mustsee">
+    <h1 class="floor-head" id='flag_id'></h1>
+</div>
+<!--每日必看 end-->
+<!-- 每日必看中爆款deal  start-->
+<div class="must_see_content" id="must_see">
+    <div class="must_see_box_wrap">
+        <div class="time_axis_wrap">
+            <div class="time_axis">今天22:00</div>
+        </div>
+        <!--  时间戳 icon-->
+        <!-- 每日必看 deal 中得每个  -->
+        <div class="must_see_box">
+            <div class="must_see_left">
+                <a href="http://www.jumeiglobal.com/deal/ht150318p1346504t1.html?from=homehot_1_1" class="must_see_link" target="_blank">
+                    <img data-src="http://p4.jmstatic.com/deal_product/h1/tt/ht150318p1346504t1/ht150318p1346504t1_1_2_1070_305.jpg" width="1070" height="305" />
+                </a>
+            </div>
+            <p class="timer_txt">3月18日晚10点开抢</p>
+            <!--  未开抢的时间显示-->
+            <a href="http://www.jumeiglobal.com/deal/ht150318p1346504t1.html?from=homehot_1_1" class="must_see_into must_see_heart" target="_blank">加入心愿单</a>
+        </div>
+        <!-- 每日必看 deal 中得每个 end-->
+    </div>
+    <div class="must_see_box_wrap">
+        <div class="time_axis_wrap">
+            <div class="time_axis">明天10:00</div>
+        </div>
+        <!--  时间戳 icon-->
+        <!-- 每日必看 deal 中得每个  -->
+        <div class="must_see_box">
+            <div class="must_see_left">
+                <a href="http://www.jumeiglobal.com/deal/ht150319p933681t1.html?from=homehot_2_1" class="must_see_link" target="_blank">
+                    <img data-src="http://p4.jmstatic.com/deal_product/h1/tt/ht150319p933681t1/ht150319p933681t1_1_2_1070_305.jpg" width="1070" height="305" />
+                    <span class="must_see_icon"></span> </a>
+            </div>
+            <p class="timer_txt">3月19日早10点开抢</p>
+            <!--  未开抢的时间显示-->
+            <a href="http://www.jumeiglobal.com/deal/ht150319p933681t1.html?from=homehot_2_1" class="must_see_into must_see_heart" target="_blank">加入心愿单</a>
+        </div>
+        <!-- 每日必看 deal 中得每个 end-->
+    </div>
+    <div class="to_hot_detail"><a href="css/hot?from=home_show" target="_blank">查看更多爆款</a>
+    </div>
+</div>
+<!-- 今日爆款 && 明日爆款  start -->
+<div id="baokuan">
+    <div class="bk_tab_content">
+        <div class="bk-con">
+            <div class="deal-img-wrap">
+                <a href="http://www.jumeiglobal.com/deal/ht150318p1269374t2.html?from=index_hotdeals1_ht_pos002_d_onsale" target="_blank" class="deal-img-link">
+                    <img class="img_pos_115" alt="医食同源(ISDG)爽快酵素60粒/袋，饱食大餐，也能轻松享瘦！" data-src="http://p4.jmstatic.com/product/001/269/1269374_std/1269374_dx_1500_400.jpg" width="1275" height="340" />
+                    <span class="top_2"></span>
+                    <div class="all_bicon_box">
+                        <div class="all_bicon all_haitao png">海淘</div>
+                    </div>
+                    <a href="http://www.jumeiglobal.com/deal/ht150318p1269374t2.html?from=?from=index_hotdeals1_ht_pos002_d_onsale" target="_blank" class="hw_info"><span>海外直采</span><span>海外价格</span><span>闪电发货</span></a>
+                </a>
+            </div>
+            <div class="deal-summary">
+                <div class="newindex-deal-timer">
+                    <span class="bk-timeleft home_timer today_end_time " end_time="1426903199"></span>
+                </div>
+                <a href="http://www.jumeiglobal.com/deal/ht150318p1269374t2.html?from=index_hotdeals1_ht_pos002_d_onsale" target="_blank" class="deal-summary-link">
+                    <!-- <p class="middle_tit">医食同源(ISDG)爽快酵素60粒/袋</p> -->
+                    <p class="tit">
+                        <em>4.7折/</em>
+                        <em>【官方授权】</em>不节食不运动，“健康瘦身”吃出来！来自日本酵素之乡，医食同源(ISDG)爽快酵素60粒/袋。154种天然果蔬，调节内分泌，皮肤有光泽；108种有益乳酸菌发酵，促进代谢，轻松排宿便，S身材秀出来！饱食大餐，也能轻松享瘦！健康保健品，润肠纤体，瘦身安全无负担！
+                    </p>
+                </a>
+                <div class="deal_middle clearfix">
+                    <div class="price_wrap clearfix">
+                        <span class="price"><em>¥</em>119</span>
+                        <div class="p_right">
+                            <span class="dis"><del>¥249</del></span> </div>
+                    </div>
+                    <div class="gotocart_wrap">
+                        <a href="javascript:;" class="gotocart_btn" hashid="ht150318p1269374t2">加入购物车</a>
+                    </div>
+                </div>
+                <div class="other">
+                    <span class="flag"><img src="images/029_big.jpg"></span>
+                    <span class="haitao_num_box"><span class="buy_number">40996</span>人已经购买</span>
+                </div>
+            </div>
+        </div>
+        <div class="bk-con">
+            <div class="deal-img-wrap">
+                <a href="http://www.jumeiglobal.com/deal/ht150318p1263363t1.html?from=index_hotdeals1_ht_pos003_d_soldout" target="_blank" class="deal-img-link">
+                    <img class="img_pos_115" alt="亲“眼”见证，急救神器！花王蒸汽眼罩，每天15分钟永别浮肿！黑眼圈！" data-src="http://p3.jmstatic.com/product/001/263/1263363_std/1263363_dx_1500_400.jpg" width="1275" height="340" />
+                    <span class="top_3"></span>
+                    <div class="all_bicon_box">
+                        <div class="all_bicon all_haitao png">海淘</div>
+                    </div>
+                    <div class="row_soldout"></div>
+                    <a href="http://www.jumeiglobal.com/deal/ht150318p1263363t1.html?from=?from=index_hotdeals1_ht_pos003_d_soldout" target="_blank" class="hw_info"><span>海外直采</span><span>海外价格</span><span>闪电发货</span></a>
+                </a>
+            </div>
+            <div class="deal-summary">
+                <div class="newindex-deal-timer">
+                    <!-- 抢光的情况-->
+                    <span class="bk-timeleft today_end_time qg">
+                                <em>抢光于</em>今<em>日</em> 14 <em>时</em>
+                            </span>
+                    <!-- 抢光的情况 end-->
+                </div>
+                <a href="http://www.jumeiglobal.com/deal/ht150318p1263363t1.html?from=index_hotdeals1_ht_pos003_d_soldout" target="_blank" class="deal-summary-link">
+                    <!-- <p class="middle_tit">花王（KAO）蒸汽眼罩薰衣草香型</p> -->
+                    <p class="tit">
+                        <em>6.1折/</em> 亲“眼”见证，急救神器！日本最优秀设计奖，连续两年热门搜索关键词——花王蒸汽眼罩（薰衣草味）！每天15分钟永别浮肿！黑眼圈！安全亲肤，撕开就可用！快速加热，40℃恒温！贴合100%！走到哪美到哪！改善睡眠，舒缓压力！敷出“睛”彩，戴出电眼！
+                    </p>
+                </a>
+                <div class="deal_middle clearfix">
+                    <div class="price_wrap clearfix">
+                        <span class="price"><em>¥</em>79</span>
+                        <div class="p_right">
+                            <span class="dis"><del>¥128</del></span> </div>
+                    </div>
+                    <div class="gotocart_wrap">
+                        <span class="qg_btn"></span>
+                    </div>
+                </div>
+                <div class="other">
+                    <span class="flag"><img src="images/029_big.jpg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 今日爆款 end -->
+</div>
+<!-- 今日爆款 && 明日爆款 end -->
+<!--今日推荐品牌团 start-->
+<div class="brands-deal clearfix" id="brands-deal">
+    <h3><a href="http://beauty.jumei.com" target="_blank" class="more">查看更多&gt;&gt;</a>今日推荐品牌团　<em>BRAND'S DEAL</em></h3>
+    <ul class="ul-brands-deal clearfix">
+        <li class="first">
+            <span class="all_bicon all_bnew">上新</span>
+            <a href="http://hd.jumei.com/act/ppt_lancome_150318.html?from=brandsales_4390_pos1_new" target="_blank" class="item">
+                <img width="345" height="184" data-src="http://p0.jmstatic.com/jmstore/image/000/000/532_std/550288f2dbf71_450_240.jpg?1426500039" class="pic">
+                <div class="desc">
+                    <p><b>兰蔻品牌团</b>
+                    </p>
+                    <p>启动基因 看见年轻</p>
+                    <p class="zhe">全场<span>4</span>折起</p>
+                    <p class="timebox home_timer" end_time="1426903199"><span>特卖剩余时间</span>
+                    </p>
+                    </p>
+                    <img data-src="http://p0.jmstatic.com/brand/logo_180/99.jpg" class="logo" />
+                </div>
+            </a>
+        </li>
+        <li>
+            <span class="all_bicon all_bnew">上新</span>
+            <a href="http://hd.jumei.com/act/ppt_laneige_150318.html?from=brandsales_4329_pos2_new" target="_blank" class="item">
+                <img width="345" height="184" data-src="http://p0.jmstatic.com/jmstore/image/000/000/395_std/550009c18272e_450_240.jpg?1426653936" class="pic">
+                <div class="desc">
+                    <p><b>兰芝品牌团</b>
+                    </p>
+                    <p>唤醒与生俱来的闪耀之美</p>
+                    <p class="zhe">满<span>420</span>赠<span>420</span>
+                    </p>
+                    <p class="timebox home_timer" end_time="1426903199"><span>特卖剩余时间</span>
+                    </p>
+                    </p>
+                    <img data-src="http://p0.jmstatic.com/brand/logo_180/10.jpg" class="logo" />
+                </div>
+            </a>
+        </li>
+        <li class="last">
+            <span class="all_bicon all_bnew">上新</span>
+            <a href="http://hd.jumei.com/act/ppt_mybeautydiary_150318.html?from=brandsales_4262_pos3_new" target="_blank" class="item">
+                <img width="345" height="184" data-src="http://p0.jmstatic.com/jmstore/image/000/000/373_std/5507c7d32510c_450_240.jpg?1426573271" class="pic">
+                <div class="desc">
+                    <p><b>我的美丽日志品牌团</b>
+                    </p>
+                    <p>春肌四溢，保湿美白</p>
+                    <p class="zhe">满<span>299</span>减<span>100</span>
+                    </p>
+                    <p class="timebox home_timer" end_time="1426903199"><span>特卖剩余时间</span>
+                    </p>
+                    </p>
+                    <img data-src="http://p0.jmstatic.com/brand/logo_180/3344.jpg" class="logo" />
+                </div>
+            </a>
+        </li>
+        <li class="first">
+            <a href="http://hd.jumei.com/act/ppt_cetaphil_150317.html?from=brandsales_4308_pos4_new" target="_blank" class="item">
+                <img width="345" height="184" data-src="http://p0.jmstatic.com/jmstore/image/000/000/468_std/54fd4291a4054_450_240.jpg?1426477801" class="pic">
+                <div class="desc">
+                    <p><b>丝塔芙品牌团</b>
+                    </p>
+                    <p>爱有多温和 就有多滋润</p>
+                    <p class="zhe">满<span>199</span>减<span>100</span>
+                    </p>
+                    <p class="timebox home_timer" end_time="1426816799"><span>特卖剩余时间</span>
+                    </p>
+                    </p>
+                    <img data-src="http://p0.jmstatic.com/brand/logo_180/152.jpg" class="logo" />
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://hd.jumei.com/act/ppt_loccitane_150317.html?from=brandsales_4386_pos5_new" target="_blank" class="item">
+                <img width="345" height="184" data-src="http://p0.jmstatic.com/jmstore/image/000/000/502_std/550282d05fcdf_450_240.jpg?1426232920" class="pic">
+                <div class="desc">
+                    <p><b>欧舒丹品牌团</b>
+                    </p>
+                    <p>来自普罗旺斯的护肤专家</p>
+                    <p class="zhe">全场<span>5.5</span>折起</p>
+                    <p class="timebox home_timer" end_time="1426816799"><span>特卖剩余时间</span>
+                    </p>
+                    </p>
+                    <img data-src="http://p0.jmstatic.com/brand/logo_180/930.jpg" class="logo" />
+                </div>
+            </a>
+        </li>
+        <li class="last">
+            <span class="all_bicon all_byre">预热</span>
+            <a href="http://hd.jumei.com/act/ppt_HERBORIST_150319.html?from=brandsales_4391_pos6_new" target="_blank" class="item">
+                <img width="345" height="184" data-src="http://p0.jmstatic.com/jmstore/image/000/000/494_std/550298955a1b6_450_240.jpg?1426644401" class="pic">
+                <div class="desc">
+                    <p><b><i>[即将开始]</i>佰草集品牌团</b>
+                    </p>
+                    <p>古方焕神奇 美肌得新生</p>
+                    <p class="zhe"><span>269</span>减<span>50</span>送<span>109</span>
+                    </p>
+                    <p class="timebox"><em>将于</em>3月19日 10:00<em>开抢</em>
+                    </p>
+                    </p>
+                    <img data-src="http://p0.jmstatic.com/brand/logo_180/630.jpg" class="logo" />
+                </div>
+            </a>
+        </li>
+        <li class="first">
+            <span class="all_bicon all_byre">预热</span>
+            <a href="http://hd.jumei.com/act/ppt_Za_150319.html?from=brandsales_4300_pos7_new" target="_blank" class="item">
+                <img width="345" height="184" data-src="http://p0.jmstatic.com/jmstore/image/000/000/98_std/54fd1039d03b1_450_240.jpg?1426586722" class="pic">
+                <div class="desc">
+                    <p><b><i>[即将开始]</i>Za品牌团</b>
+                    </p>
+                    <p>Za入驻两周年</p>
+                    <p class="zhe"><span>199</span>减<span>50</span>赠<span>199</span>
+                    </p>
+                    <p class="timebox"><em>将于</em>3月19日 10:00<em>开抢</em>
+                    </p>
+                    </p>
+                    <img data-src="http://p0.jmstatic.com/brand/logo_180/679.jpg" class="logo" />
+                </div>
+            </a>
+        </li>
+        <li>
+            <span class="all_bicon all_byre">预热</span>
+            <a href="http://hd.jumei.com/act/ppt_clarins_150319.html?from=brandsales_4434_pos8_new" target="_blank" class="item">
+                <img width="345" height="184" data-src="http://p0.jmstatic.com/jmstore/image/000/000/502_std/5507ceafcda26_450_240.jpg?1426586116" class="pic">
+                <div class="desc">
+                    <p><b><i>[即将开始]</i>娇韵诗品牌团</b>
+                    </p>
+                    <p>法国女人“娇”人之谜</p>
+                    <p class="zhe">全场<span>4</span>折起</p>
+                    <p class="timebox"><em>将于</em>3月19日 10:00<em>开抢</em>
+                    </p>
+                    </p>
+                    <img data-src="http://p0.jmstatic.com/brand/logo_180/285.jpg" class="logo" />
+                </div>
+            </a>
+        </li>
+        <li class="last">
+            <a href="http://www.jumeiglobal.com/act/ppt_isdg_150318.html?from=all_null_index_mco_branddeal_last&lo=3219&mat=38142" target="_blank" class="item"><img src="images/38142_345_281_003-web.jpg" />
+            </a>
+        </li>
+    </ul>
+</div>
+<!--今日推荐品牌团 end-->
+
+
+
+        <!-- /block1 -->
+        <!-- block2 -->
+        <!--今日上新品.首推 start-->
+<div class="today-deals" id="today-deals">
+    <h2 class="floor-head"></h2>
+</div>
+<!--今日上新品.首推 end-->
+<!--今日上新品.列表 start-->
+<div id="toady_deal_list" class="home_deal_list_container clearfix">
+    <div category="retail_global" class="deal_box  deal_diaoxing" sale="normal" pos="001" pid="1267287" pf="" bid="7470" cid="471" cpath="" style="">
+        <b class="hid_hashid">ht150318p1267287t2</b>
+        <div class="img_box">
+            <a href="http://www.jumeiglobal.com/deal/ht150318p1267287t2.html?from=index_hotdeals1_ht_pos001_d1_onsale_new" target="_blank" rel="nofollow" class="img-link">
+                <img data-src="http://p2.jmstatic.com/product/001/267/1267287_std/1267287_dx_1000_400.jpg" alt="医食同源(ISDG)Diet酵素60粒/袋，“健康瘦身“吃出来！" class="dx_pic" width="862" height="345" />
+                <div class="all_bicon_box">
+                    <div class="all_bicon all_haitao png">海淘</div>
+                </div>
+                <!-- 海淘商品加判断 -->
+                <div class="koubei_box_all haitao_all">
+                    <div class="koubei_box">
+                        <!-- 海淘商品加判断 -->
+                        <span class="haitao_info">海外直采 海外价格 闪电发货</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <a href="http://www.jumeiglobal.com/deal/ht150318p1267287t2.html?from=index_hotdeals1_ht_pos001_d1_onsale_new" target="_blank" class="deal_link" rel="nofollow">
+            <p class="title_box">
+                <!--  预售 -->
+                <!--  预售 end-->
+                <span class="pink"><em class="num">4.9</em>折<em>/</em></span>
+                <span class="pink">【官方授权】</span>医食同源(ISDG)Diet酵素60粒/袋，“健康瘦身“吃出来！
+            </p>
+            <div class="intro_box">
+                <div class="price_box">
+                    <div class="p_left"><em>¥</em><span class="pnum">99</span>
+                    </div>
+                    <div class="p_right">
+                        <span class="mnum">¥199</span> </div>
+                    <!-- 货币符号加判断-->
+                </div>
+            </div>
+            <div class="flag"><img src="images/029_big.jpg" />
+            </div>
+            <div class="haitao_num_box">销量： <span class="buy_num">24219</span>
+            </div>
+        </a>
+    </div>
+    <div category="retail_global" class="deal_box  deal_diaoxing" sale="normal" pos="002" pid="1269299" pf="" bid="7470" cid="441" cpath="" style="">
+        <b class="hid_hashid">ht150318p1269299t2</b>
+        <div class="img_box">
+            <a href="http://www.jumeiglobal.com/deal/ht150318p1269299t2.html?from=index_hotdeals1_ht_pos002_d1_onsale_new" target="_blank" rel="nofollow" class="img-link">
+                <img data-src="http://p4.jmstatic.com/product/001/269/1269299_std/1269299_dx_1000_400.jpg" alt="医食同源(ISDG)大麦若叶青汁50包/盒，采用日本最新配方的健康食品。" class="dx_pic" width="862" height="345" />
+                <div class="all_bicon_box">
+                    <div class="all_bicon all_haitao png">海淘</div>
+                </div>
+                <!-- 海淘商品加判断 -->
+                <div class="koubei_box_all haitao_all">
+                    <div class="koubei_box">
+                        <!-- 海淘商品加判断 -->
+                        <span class="haitao_info">海外直采 海外价格 闪电发货</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <a href="http://www.jumeiglobal.com/deal/ht150318p1269299t2.html?from=index_hotdeals1_ht_pos002_d1_onsale_new" target="_blank" class="deal_link" rel="nofollow">
+            <p class="title_box">
+                <!--  预售 -->
+                <!--  预售 end-->
+                <span class="pink"><em class="num">4.7</em>折<em>/</em></span>
+                <span class="pink">【官方授权】</span>医食同源(ISDG)大麦若叶青汁50包/盒，采用日本最新配方的健康食品。
+            </p>
+            <div class="intro_box">
+                <div class="price_box">
+                    <div class="p_left"><em>¥</em><span class="pnum">129</span>
+                    </div>
+                    <div class="p_right">
+                        <span class="mnum">¥269</span> </div>
+                    <!-- 货币符号加判断-->
+                </div>
+            </div>
+            <div class="flag"><img src="images/029_big.jpg" />
+            </div>
+            <div class="haitao_num_box">销量： <span class="buy_num">15143</span>
+            </div>
+        </a>
+    </div>
+    <div category="retail_global" class="deal_box  soldout deal_diaoxing" sale="normal" pos="003" pid="1264108" pf="" bid="6590" cid="18" cpath="" style="">
+        <b class="hid_hashid">ht150318p1264108t1</b>
+        <div class="img_box">
+            <a href="http://www.jumeiglobal.com/deal/ht150318p1264108t1.html?from=index_hotdeals1_ht_pos003_d1_soldout_new" target="_blank" rel="nofollow">
+                <div class="row_soldout"></div>
+            </a>
+            <a href="http://www.jumeiglobal.com/deal/ht150318p1264108t1.html?from=index_hotdeals1_ht_pos003_d1_soldout_new" target="_blank" rel="nofollow" class="img-link">
+                <img data-src="http://p3.jmstatic.com/product/001/264/1264108_std/1264108_dx_1000_400.jpg" alt="卸妆胜过保养，残留等于毁容！日本ALOVIVI卸妆皇后，速融净妆，裸肌0压力！" class="dx_pic" width="862" height="345" />
+                <div class="all_bicon_box">
+                    <div class="all_bicon all_haitao png">海淘</div>
+                </div>
+                <!-- 海淘商品加判断 -->
+                <div class="koubei_box_all haitao_all">
+                    <div class="koubei_box">
+                        <!-- 海淘商品加判断 -->
+                        <span class="haitao_info">海外直采 海外价格 闪电发货</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <a href="http://www.jumeiglobal.com/deal/ht150318p1264108t1.html?from=index_hotdeals1_ht_pos003_d1_soldout_new" target="_blank" class="deal_link" rel="nofollow">
+            <p class="title_box">
+                <!--  预售 -->
+                <!--  预售 end-->
+                <span class="pink"><em class="num">6.6</em>折<em>/</em></span> 卸妆胜过保养，残留等于毁容！日本ALOVIVI卸妆皇后，速融净妆，裸肌0压力！
+            </p>
+            <div class="intro_box">
+                <div class="price_box">
+                    <div class="p_left"><em>¥</em><span class="pnum">69</span>
+                    </div>
+                    <div class="p_right">
+                        <span class="mnum">¥103</span> </div>
+                    <!-- 货币符号加判断-->
+                </div>
+            </div>
+            <div class="flag"><img src="images/029_big.jpg" />
+            </div>
+        </a>
+    </div>
+    <div category="retail_global" class="deal_box  soldout deal_diaoxing" sale="normal" pos="004" pid="1322904" pf="" bid="7659" cid="65" cpath="" style="">
+        <b class="hid_hashid">ht150318p1322904t1</b>
+        <div class="img_box">
+            <a href="http://www.jumeiglobal.com/deal/ht150318p1322904t1.html?from=index_hotdeals1_ht_pos004_d1_soldout_new" target="_blank" rel="nofollow">
+                <div class="row_soldout"></div>
+            </a>
+            <a href="http://www.jumeiglobal.com/deal/ht150318p1322904t1.html?from=index_hotdeals1_ht_pos004_d1_soldout_new" target="_blank" rel="nofollow" class="img-link">
+                <img data-src="http://p4.jmstatic.com/product/001/322/1322904_std/1322904_dx_1000_400.jpg" alt="韩国乐天推荐发膜：CP1蛋白质针剂发膜，柔顺秀发，滋养修护！" class="dx_pic" width="862" height="345" />
+                <div class="all_bicon_box">
+                    <div class="all_bicon all_haitao png">海淘</div>
+                </div>
+                <!-- 海淘商品加判断 -->
+                <div class="koubei_box_all haitao_all">
+                    <div class="koubei_box">
+                        <!-- 海淘商品加判断 -->
+                        <span class="haitao_info">海外直采 海外价格 闪电发货</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <a href="http://www.jumeiglobal.com/deal/ht150318p1322904t1.html?from=index_hotdeals1_ht_pos004_d1_soldout_new" target="_blank" class="deal_link" rel="nofollow">
+            <p class="title_box">
+                <!--  预售 -->
+                <!--  预售 end-->
+                <span class="pink"><em class="num">5</em>折<em>/</em></span>
+                <span class="pink">【官方授权】</span>韩国乐天推荐发膜：CP1蛋白质针剂发膜，柔顺秀发，滋养修护！
+            </p>
+            <div class="intro_box">
+                <div class="price_box">
+                    <div class="p_left"><em>¥</em><span class="pnum">59.9</span>
+                    </div>
+                    <div class="p_right">
+                        <span class="mnum">¥119</span> </div>
+                    <!-- 货币符号加判断-->
+                </div>
+            </div>
+            <div class="flag"><img src="images/029_big.jpg" />
+            </div>
+        </a>
+    </div>
+    <div category="product" class="deal_box " sale="normal" pos="005" pid="1300388" pf="" bid="3344" cid="14" cpath="" style="">
+        <b class="hid_hashid">d150318p1300388zc</b>
+        <div class="img_box">
+            <a href="http://item.jumei.com/d150318p1300388zc.html?from=index_hotdeals3_pos005_d1_onsale_new" target="_blank" rel="nofollow" class="img-link">
+                <img data-src="http://p3.jmstatic.com/product/001/300/1300388_std/1300388_350_350.jpg" alt="【满299立减100】来自宝岛台湾超高人气的面膜！精选面膜欢庆乐章篇34入。" class="wh_pic" width="350" height="350" />
+                <div class="all_bicon_box">
+                    <div class="all_bicon all_laca">防伪码</div>
+                </div>
+                <!-- 海淘商品加判断 -->
+                <div class="koubei_box_all ">
+                    <div class="koubei_box">
+                        <!-- 海淘商品加判断 -->
+                        <b class="link"><span class="num">122</span> 条评论</b>
+                        <div class="service_rating small">
+                            <span class="rating_num">5.0/5</span>
+                            <div class="rating png">
+                                <div style="width:100%" class="value png"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <a href="http://item.jumei.com/d150318p1300388zc.html?from=index_hotdeals3_pos005_d1_onsale_new" target="_blank" class="deal_link" rel="nofollow">
+            <p class="title_box">
+                <!--  预售 -->
+                <!--  预售 end-->
+                <span class="pink"><em class="num">8.7</em>折<em>/</em></span>
+                <span class="pink">【官方授权】</span>【满299立减100】来自宝岛台湾超高人气的面膜！精选面膜欢庆乐章篇34入。
+            </p>
+            <div class="intro_box">
+                <div class="price_box">
+                    <div class="p_left"><em>¥</em><span class="pnum">299</span>
+                    </div>
+                    <div class="p_right">
+                        <div class="icon_p">
+                            <span class="y_icon">包邮</span>
+                        </div>
+                        <span class="mnum">¥340</span> </div>
+                    <!-- 货币符号加判断-->
+                </div>
+                <div class="numtimer_box">
+                    <div class="time_box home_timer" end_time="1426903199"></div>
+                    <div class="num_box">销量：<span class="buy_num">1875</span> |</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div category="retail_global" class="deal_box  soldout deal_diaoxing" sale="normal" pos="009" pid="938807" pf="" bid="14" cid="33" cpath="" style="">
+        <b class="hid_hashid">ht150318p938807t1</b>
+        <div class="img_box">
+            <a href="http://www.jumeiglobal.com/deal/ht150318p938807t1.html?from=index_hotdeals1_ht_pos009_d1_soldout_new" target="_blank" rel="nofollow">
+                <div class="row_soldout"></div>
+            </a>
+            <a href="http://www.jumeiglobal.com/deal/ht150318p938807t1.html?from=index_hotdeals1_ht_pos009_d1_soldout_new" target="_blank" rel="nofollow" class="img-link">
+                <img data-src="http://p2.jmstatic.com/product/000/938/938807_std/938807_350_350.jpg" alt="宝宝贴身小卫士来啦！水宝宝防晒喷雾SPF30+213g！" class="wh_pic" width="350" height="350" />
+                <div class="all_bicon_box">
+                    <div class="all_bicon all_haitao png">海淘</div>
+                </div>
+                <!-- 海淘商品加判断 -->
+                <div class="koubei_box_all haitao_all">
+                    <div class="koubei_box">
+                        <!-- 海淘商品加判断 -->
+                        <span class="haitao_info">海外直采 海外价格 闪电发货</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <a href="http://www.jumeiglobal.com/deal/ht150318p938807t1.html?from=index_hotdeals1_ht_pos009_d1_soldout_new" target="_blank" class="deal_link" rel="nofollow">
+            <p class="title_box">
+                <!--  预售 -->
+                <!--  预售 end-->
+                <span class="pink"><em class="num">4.3</em>折<em>/</em></span> 宝宝贴身小卫士来啦！水宝宝防晒喷雾SPF30+213g！
+            </p>
+            <div class="intro_box">
+                <div class="price_box">
+                    <div class="p_left"><em>¥</em><span class="pnum">85</span>
+                    </div>
+                    <div class="p_right">
+                        <span class="mnum">¥196</span> </div>
+                    <!-- 货币符号加判断-->
+                </div>
+            </div>
+            <div class="flag"><img src="images/029_big.jpg" />
+            </div>
+        </a>
+    </div>
+    <div class="clear"></div>
+</div>
+<!--今日上新品.列表 end-->
+
+        <!-- /block2 -->
+        <!-- block3 -->
+        <!--美妆品牌团 start-->
+<div class="cosmetics-floor brands-floor" id="cosmetics-floor">
+    <h2 class="floor-head"><a href="http://beauty.jumei.com/?from=newhone_beauty" target="_blank" class="floor-view-more">查看更多>></a></h2>
+    <div class="bf-content clearfix">
+        <div class="fl">
+            <a href="http://beauty.jumei.com/?from=all_null_index_floor_cosmetics_chanel&lo=3220&mat=21619" target="_blank"><img data-src="http://p0.jmstatic.com/banner/3220/21619_258_425_001-web.jpg?1415710971" />
+            </a>
+        </div>
+        <div class="fr">
+            <ul class="bf-ul-content clearfix">
+                <li>
+                    <a href="http://hd.jumei.com/act/ppt_avene_150316.html?from=all_null_index_floor_cosmetics_activity&lo=3221&mat=38207" target="_blank">
+                        <img data-src="http://p0.jmstatic.com/banner/3221/38207_380_205_002-web.jpg?1426586334" width="380" height="205" />
+                        <div class="bf-item-info">
+                            <p class="tit">雅漾品牌团</p>
+                            <p class="subtit">十年敏肌 百年雅漾</p>
+                            <p class="sale">全场<em>5</em>折起</p>
+                            <p class="time_left home_timer" end_time="1426730399">结束时间</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://hd.jumei.com/act/ppt_thefaceshop_150317.html?from=all_null_index_floor_cosmetics_activity&lo=3221&mat=38201" target="_blank">
+                        <img data-src="http://p0.jmstatic.com/banner/3221/38201_380_205_001-web.jpg?1426583114" width="380" height="205" />
+                        <div class="bf-item-info">
+                            <p class="tit">菲诗小铺品牌团</p>
+                            <p class="subtit">韩妆第一品牌</p>
+                            <p class="sale">满<em>100</em>赠<em>100</em>
+                            </p>
+                            <p class="time_left home_timer" end_time="1426816799">结束时间</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://hd.jumei.com/act/ppt_gdxh_150318.html?from=all_null_index_floor_cosmetics_activity&lo=3221&mat=38200" target="_blank">
+                        <img data-src="http://p0.jmstatic.com/banner/3221/38200_380_205_002-web.jpg?1426580687" width="380" height="205" />
+                        <div class="bf-item-info">
+                            <p class="tit">高端洗护团</p>
+                            <p class="subtit">专属秀丽 从头开始</p>
+                            <p class="sale">全场<em>2.5</em>折起</p>
+                            <p class="time_left home_timer" end_time="1426903199">结束时间</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://hd.jumei.com/act/ppt_ymj_150317.html?from=all_null_index_floor_cosmetics_activity&lo=3221&mat=38199" target="_blank">
+                        <img data-src="http://p0.jmstatic.com/banner/3221/38199_380_205_001-web.jpg?1426580538" width="380" height="205" />
+                        <div class="bf-item-info">
+                            <p class="tit">女性护理团</p>
+                            <p class="subtit">“小清新”要由内到外</p>
+                            <p class="sale">满<em>199</em>减<em>100</em>
+                            </p>
+                            <p class="time_left home_timer" end_time="1426816799">结束时间</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--美妆品牌团 end-->
+<!--底部搜索 start-->
+<div class="search-wrap">
+    <div class="newhome_footer_search">
+        <div class="search_footer_wrap">
+            <form action="http://search.jumei.com/" method="get" onsubmit="return mall_search_validate(this)" target="_blank">
+                <input type="hidden" name="filter" value="0-11-1">
+                <input name="search" type="text" class="" value="" id="newhome_search_footer_input" default_val="" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh">
+                <input name="from" type="hidden" value="">
+                <input name="cat" type="hidden" value="">
+                <button type="submit" class="newhome-bottom-submit">搜索</button>
+            </form>
+            <!--搜索结果容器-->
+            <div class="search_result_pop_a" id="newhome_search_pop_div"></div>
+        </div>
+        <div class="footer_search_hot">
+            <span>热门搜索：</span>
+            <a href="http://search.jumei.com/?filter=0-11-1&search=%E4%BF%9D%E6%B9%BF" target="_blank">保湿</a>
+            <a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E9%9D%A2%E8%86%9C">面膜</a>
+            <a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E6%B4%97%E9%9D%A2%E5%A5%B6">洗面奶</a>
+            <a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E8%A1%A5%E6%B0%B4">补水</a>
+            <a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E9%A6%99%E6%B0%B4">香水</a>
+            <a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E7%9C%BC%E9%9C%9C">眼霜</a>
+            <a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E5%8F%A3%E7%BA%A2">口红</a>
+            <a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=%E6%8A%A4%E8%82%A4%E5%A5%97%E8%A3%85">护肤套装</a>
+            <a target="_blank" href="http://search.jumei.com/?filter=0-11-1&search=BB%E9%9C%9C">BB霜</a>
+        </div>
+    </div>
+</div>
+<!--底部搜索 end-->
+
+        <!-- /block3 -->
+    </div>
+    <!--右侧浮层 start-->
+    <div id="home_nav_bar">
+        <div class="home_nav_border">
+            <div class="jumei_idx">聚美
+                <br/>首页</div>
+            <ul class="home_nav_list">
+                <li id="nav_mustsee">
+                    <a href="#flag_id">
+                        <span>每日必看</span>
+                    </a>
+                </li>
+                <li id="nav_sell-well">
+                    <a href="#sell-well">
+                        <span>爆款榜</span>
+                    </a>
+                </li>
+                <li id="nav_today-deals">
+                    <a href="#today-deals">
+                        <span>上新单品</span>
+                    </a>
+                </li>
+                <li id="nav_cosmetics-floor">
+                    <a href="#cosmetics-floor">
+                        <span>品牌团</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--右侧浮层 end-->
+</div>
+
+    <!-- /main -->
+    <!-- footer -->
+    <!-- 全局的footer -->
+<div class="clear"></div>
+<div id="footer_container">
+    <div id="footer_textarea">
+        <div style="display:none"><a href="http://www.jumei.com/deals/new.html">每日更新</a>
+        </div>
+
+        <div class="footer_top">
+            <div class="footer_con" id="footer_credit">
+                <a href="http://hd.jumei.com/act/6-478-2232-guarantee.html?from=footer" class="foot_link mostmall" target="_blank" rel="nofollow">
+                    <span class="corn"></span><span class="con"><b>最大美妆电商</b></span>四千万用户信赖
+                </a>
+                <a href="http://hd.jumei.com/act/6-478-2232-guarantee.html?from=footer#jumei_ipo" class="foot_link quality" target="_blank" rel="nofollow">
+                    <span class="corn"></span><span class="con"><b>成功在美上市</b></span>股票代码NYSE:JMEI
+                </a>
+                <a href="http://hd.jumei.com/act/6-478-2232-guarantee.html?from=footer#brand_con" class="foot_link back" rel="nofollow" target="_blank">
+                    <span class="corn"></span><span class="con"><b>品牌防伪码</b></span>支持品牌官网验真
+                </a>
+                <a href="http://hd.jumei.com/act/6-478-2232-guarantee.html?from=footer#unconditionally_backtrack" class="foot_link depot" target="_blank" rel="nofollow">
+                    <span class="corn"></span><span class="con"><b>30天无理由退货</b></span>只要不满意无理由退货
+                </a>
+                <a href="http://hd.jumei.com/act/6-478-2232-guarantee.html?from=footer#user_confide" class="foot_link consignment" target="_blank" rel="nofollow">
+                    <span class="corn"></span><span class="con"><b>百万用户口碑</b></span>帮你只选对的,不选贵的
+                </a>
+                <a href="http://hd.jumei.com/act/6-478-2232-guarantee.html?from=footer#bold_consignment" class="foot_link packaging" target="_blank" rel="nofollow">
+                    <span class="corn"></span><span class="con"><b>订单闪电发货</b></span>1.5小时订单急速出库
+                </a>
+                <a href="http://hd.jumei.com/act/6-478-2232-guarantee.html?from=footer#star_commend" class="foot_link confide" target="_blank" rel="nofollow">
+                    <span class="corn"></span><span class="con"><b>大牌明星热荐</b></span>打造精致明星脸
+                </a>
+            </div>
+        </div>
+        <div class="footer_top_sen">
+            <div class="footer_con" id="footer_links">
+                <ul class="linksa png">
+                    <li class="links">服务保障</li>
+                    <li><a href="http://www.jumei.com/act/6-478-2232-guarantee.html?from=footer#brand_con" target="_blank" rel="nofollow">品牌真品防伪码</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/act/6-478-2232-guarantee.html?from=footer" target="_blank" rel="nofollow">100%正品保证</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/act/6-478-2232-guarantee.html?from=footer#unconditionally_backtrack" target="_blank" rel="nofollow">30天无条件退货</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/help/faq?from=footer" target="_blank" rel="nofollow">7×24小时客服服务</a>
+                    </li>
+                    <li><span class="footer_zcemail">总裁邮箱ceo@jumei.com</span>
+                    </li>
+                </ul>
+                <ul class="linksb png">
+                    <li class="links">使用帮助</li>
+                    <li><a href="http://www.jumei.com/help/guidebook?from=footer" target="_blank" rel="nofollow">新手指南</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/help/faq?from=footer" target="_blank" rel="nofollow">常见问题</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/help/main?from=footer" target="_blank" rel="nofollow">帮助中心</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/i/help/user_terms?from=footer" target="_blank" rel="nofollow">用户协议</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/activity_qiye_tuangou.html?from=footer" target="_blank" rel="nofollow">企业用户团购</a>
+                    </li>
+                </ul>
+                <ul class="linksc png">
+                    <li class="links">支付方式</li>
+                    <li><a href="http://www.jumei.com/help/pay_cod?from=footer" target="_blank" rel="nofollow">货到付款</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/help/pay_online?from=footer" target="_blank" rel="nofollow">在线支付</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/help/pay_balance?from=footer" target="_blank" rel="nofollow">余额支付</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/help/pay_promocards?from=footer" target="_blank" rel="nofollow">现金券支付</a>
+                    </li>
+                </ul>
+                <ul class="linksd png">
+                    <li class="links">配送方式</li>
+                    <li><a href="http://www.jumei.com/help/two_for_freeshipping?from=footer" target="_blank" rel="nofollow">包邮政策</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/help/delivery_state?from=footer" target="_blank" rel="nofollow">配送说明</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/help/delivery_fee?from=footer" target="_blank" rel="nofollow">运费说明</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/help/check_goods?from=footer" target="_blank" rel="nofollow">验货签收</a>
+                    </li>
+                </ul>
+                <ul class="linkse png">
+                    <li class="links">售后服务</li>
+                    <li><a href="http://hd.jumei.com/act/6-478-2232-guarantee.html?from=footer" target="_blank" rel="nofollow">正品承诺</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/help/faq?from=footer" target="_blank" rel="nofollow">售后咨询</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/help/refund_policies?from=footer" target="_blank" rel="nofollow">退货政策</a>
+                    </li>
+                    <li><a href="http://www.jumei.com/help/refund_handle?from=footer" target="_blank" rel="nofollow">退货办理</a>
+                    </li>
+                </ul>
+                <span class="links_er_box">
+<ul class="linksf">
+<li class="links">手机聚美</li>
+<li><span class="link_bottom_pic"></span>
+                </li>
+                <li>下载移动客户端</li>
+                </ul>
+                <ul class="linksg">
+                    <li class="links">聚美微信</li>
+                    <li><span class="link_bottom_pic"></span>
+                    </li>
+                    <li>聚美官方微信</li>
+                </ul>
+                </span>
+            </div>
+        </div>
+        <div class="footer_dy" id="footer_dy">
+            <div class="play_box"><span class="play"></span>
+            </div>
+        </div>
+        <div class="footer_center">
+            <div class="footer_con" id="footer_link">
+                <a href="http://www.jumei.com/about/about_us?from=footer" target="_blank" rel="nofollow">关于聚美优品</a>
+                <a href="http://jumei.investorroom.com?from=footer" target="_blank" rel="nofollow">INVESTOR RELATIONS</a>
+                <a href="http://hd.jumei.com/act/9-478-2448-pop_invite_business_page.html?site=gz&from=footer" target="_blank" rel="nofollow">商家入驻</a>
+                <a href="http://www.jumei.com/help/get_update?from=footer" target="_blank" rel="nofollow">获取更新</a>
+                <a href="http://jumeizhaopin.hirede.com?from=footer" target="_blank" rel="nofollow">加入聚美</a>
+                <a href="http://www.jumei.com/i/market/cooperation?from=footer" target="_blank" rel="nofollow">品牌合作专区</a>
+                <a href="http://cps.jumei.com?from=footer" target="_blank" rel="nofollow">网站联盟</a>
+                <a href="http://www.jumei.com/about/news_center?from=footer" target="_blank" rel="nofollow">媒体报道</a>
+                <a href="http://www.jumei.com/about/business?from=footer" target="_blank" rel="nofollow">商务合作</a>
+            </div>
+        </div>
+        <div id="footer_copyright">
+            <div class="footer_con">
+                <p class="footer_copy_con">
+                    COPYRIGHT &copy; 2010-2015 北京创锐文化传媒有限公司 JUMEI.COM 保留一切权利。 客服热线：400-123-8888
+                    <br/> 京公网安备 11010102001226 | <a href="http://www.miibeian.gov.cn/state/outPortal/loginPortal.action" target="_blank" rel="nofollow">京ICP证10046944号</a> | 食品流通许可证 SP1101051110165515（1-1） | <a href="http://p2.jmstatic.com/activity/2013_chuangrui.jpeg" target="_blank" rel="nofollow">营业执照</a>
+                </p>
+                <p>
+                    <a href="javascript:void(0)" class="footer_copy_logo logo01" rel="nofollow"></a>
+                    <a href="https://www.itrust.org.cn/yz/pjwx.asp?wm=1693268180" target="_blank" class="footer_copy_logo logo02" rel="nofollow"></a>
+                    <a href="javascript:void(0)" class="footer_copy_logo logo03" rel="nofollow"></a>
+                    <a href="javascript:void(0)" class="footer_copy_logo logo04" rel="nofollow"></a>
+                    <a href="https://ss.knet.cn/verifyseal.dll?sn=e12070911010031011307708&ct=df&pa=453163" target="_blank" class="footer_copy_logo logo05" rel="nofollow"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+@@include("./_global/footer_js.html",{
+    "js":"combo.corelibs,combo.mods_index"
+})
+</body>
+</html>
