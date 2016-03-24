@@ -4,7 +4,7 @@
 
 ================
 
-by lmtdit
+by Pang.J.G
 
 ## v.builder的起源
 
@@ -90,7 +90,7 @@ gulp --e www
 ## 使用说明及规范
 
 ### 核心构建流程
-![核心构建流程图](./doc/main_workflow.png)
+![核心构建流程图](./doc/main-workflow.png)
 (未完待续)
 
 ### 雪碧图构建流程及开发说明
@@ -143,9 +143,6 @@ gulp --e www
 ```
 #### 静态html模块化开发的建议：
 (未完待续)
-
-
-
 
 ## License
 
