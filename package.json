@@ -8,7 +8,7 @@
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.7",
-    "vbuilder": "^2.1.4"
+    "vbuilder": "^2.1.6"
   },
   "name": "v.builder",
   "version": "2.1.6",

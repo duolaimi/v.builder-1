@@ -121,7 +121,7 @@ gulp --e www
 
 vbuilder中包含的html模板引擎，实际上是在ejs模板引擎语法上进行的二次封装，此框架设定的ejs模板标志为 `@`
 
-例如：当参数名字为`css`，值为 `pintuer.css,admin.css`，那么，在`local`开发环境下 `<@- css @>` 将被实例为如下的html
+例如：当参数名字为`css`，值为 `common.css,index.css`，那么，在`local`开发环境下 `<@- css @>` 将被实例为如下的html
 
 ```HTML
 <link href='//localhost:8800/debug/css/common.css?v=2.1.6&t=14588093' rel='stylesheet' type='text/css' />
